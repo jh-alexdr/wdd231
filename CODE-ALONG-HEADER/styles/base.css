@@ -23,6 +23,7 @@ header img {
     display: block;
     width: 100%;
     height: auto;
+    padding-bottom: 5px;
 }
 
 header span {
@@ -37,10 +38,16 @@ header span {
     border: none;
     color: #3D405B;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
 .hamburger::before {
     content: "\2630";
     font-size: 2rem;
+}
+
+.humberguer.show::before {
+    content: "\00D7";
+    
 }
