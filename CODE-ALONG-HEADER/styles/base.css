@@ -1,0 +1,46 @@
+/* COLOR SCHEME 
+terra cotta #ED7A5F
+deep slate blue #3D405B,
+*/
+
+/**********SITE WIDE STYLES**********/
+* {
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/********HEADER STYLES**********/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+}
+
+/*********HAMBURGER BUTTON STYLES**********/
+.hamburger {
+    background: none;
+    ;
+    border: none;
+    color: #3D405B;
+    cursor: pointer;
+
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
