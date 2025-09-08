@@ -49,5 +49,40 @@ header span {
 
 .humberguer.show::before {
     content: "\00D7";
-    
+
+}
+
+/*********FOOTER STYLES**********/
+footer {
+    background-color: gray;
+    padding: 1rem 10px;
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-items: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: white dashed solid 1px;
+    border-radius: 4px;
+
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.social a:hover {
+    background-color: white;
+
 }
