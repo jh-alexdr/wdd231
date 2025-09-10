@@ -2,18 +2,19 @@
 
 :root {
     --font-main: 'Josefin Sans', Arial, sans-serif;
-    --color-header: #f8bbd0;
-    --color-nav: #f8bbd0;
-    --color-nav-text: #222;
-    --color-nav-hover: #f06292;
-    --color-section-header: #f06292;
+    --color-header: #22334a;
+    --color-nav: #22334a;
+    --color-nav-text: #fff;
+    --color-nav-hover: #3e92cc;
+    --color-section-header: #2a4d69;
     --color-section-header-text: #fff;
-    --color-card: #fff;
-    --color-border: #e0e0e0;
-    --color-footer: #f8bbd0;
-    --color-footer-text: #222;
-    --color-accent: #f06292;
-    --color-hover: #ffe0f0;
+    --color-card: #f4f7fa;
+    --color-border: #b0b8c1;
+    --color-footer: #22334a;
+    --color-footer-text: #fff;
+    --color-accent: #3e92cc;
+    --color-hover: #dbeafe;
+    --color-shadow-green: #2ecc4066;
 }
 
 html,
@@ -56,22 +57,28 @@ header span {
 .site-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-nav-text);
+    color: #22334a;
+    /* Color oscuro */
     letter-spacing: 1px;
 }
 
+/* Hamburguesa visible y oscura */
 .hamburger {
     background: none;
     border: none;
-    color: var(--color-nav-text);
+    color: #22334a;
+    /* Color oscuro */
     font-size: 2rem;
     cursor: pointer;
     display: block;
 }
 
 nav {
-    background: var(--color-nav);
+    background: #e9eef5;
+    /* Fondo claro */
     box-shadow: 0 2px 4px #0001;
+    margin: 0 1rem;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -88,19 +95,22 @@ nav li {
 }
 
 nav a {
-    color: var(--color-nav-text);
+    color: #22334a;
+    /* Texto oscuro */
     text-decoration: none;
     display: block;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     border-radius: 6px;
     transition: background 0.2s, color 0.2s;
+    background: transparent;
 }
 
 nav .current a,
 nav a:hover,
 nav a:focus {
-    background: var(--color-nav-hover);
+    background: var(--color-accent);
+    /* Azul */
     color: #fff;
 }
 
@@ -125,7 +135,7 @@ h1 {
     background: var(--color-card);
     border: 1.5px solid var(--color-border);
     border-radius: 10px;
-    box-shadow: 0 2px 8px #0001;
+    box-shadow: 0 2px 12px var(--color-shadow-green);
     margin: 0 auto;
     max-width: 95vw;
 }
@@ -165,7 +175,7 @@ h1 {
     background: var(--color-card);
     border: 1.5px solid var(--color-border);
     border-radius: 10px;
-    box-shadow: 0 2px 8px #0001;
+    box-shadow: 0 2px 12px var(--color-shadow-green);
     margin: 0 auto 2rem auto;
     max-width: 98vw;
     padding-bottom: 1rem;
@@ -267,12 +277,13 @@ dialog {
 
 footer {
     background: var(--color-footer);
-    color: var(--color-footer-text);
+    color: #22334a;
+    /* Texto oscuro */
     text-align: center;
     padding: 1.5rem 0 0.5rem 0;
     font-size: 1.1rem;
     margin-top: 2rem;
-    border-top: 2px solid #f06292;
+    border-top: 2px solid #22334a;
 }
 
 .social-links {
@@ -291,24 +302,34 @@ footer {
     transition: transform 0.2s;
 }
 
-.social-links a:hover img,
-.social-links a:focus img {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 6px var(--color-accent));
-}
-
+/* Iconos del pie de página con color azul y sombra */
 .social-links img {
     vertical-align: middle;
     width: 32px;
     height: 32px;
     margin: 0 0.2rem;
     cursor: pointer;
+    filter: drop-shadow(0 0 6px #3e92cc);
+    /* Sombra azul */
+    transition: filter 0.2s, transform 0.2s;
+    /* Cambia el color base del SVG si es posible */
+    fill: #3e92cc;
+}
+
+/* Efecto al pasar el mouse */
+.social-links a:hover img,
+.social-links a:focus img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px #2ecc40);
+    /* Sombra verde más intensa */
+    fill: #2563eb;
 }
 
 .contact-info {
     margin-bottom: 0.25rem;
     font-size: 1.1rem;
-    color: var(--color-footer-text);
+    color: #22334a;
+    /* Texto oscuro */
 }
 
 #lastModified {
