@@ -34,50 +34,13 @@ function displayCourses() {
 
 // Call the displayCourses function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Datos de cursos con detalles
     const courses = [
-        {
-            code: 'CSE 110',
-            type: 'CSE',
-            credits: 2,
-            title: 'Programming Building Blocks',
-            desc: 'Introduction to programming concepts using Python.'
-        },
-        {
-            code: 'WDD 130',
-            type: 'WDD',
-            credits: 2,
-            title: 'Web Fundamentals',
-            desc: 'This course introduces students to the World Wide Web and to careers in web site design and development.'
-        },
-        {
-            code: 'CSE 111',
-            type: 'CSE',
-            credits: 2,
-            title: 'Programming with Functions',
-            desc: 'Intermediate programming with functions and data structures.'
-        },
-        {
-            code: 'CSE 210',
-            type: 'CSE',
-            credits: 2,
-            title: 'Programming with Classes',
-            desc: 'Object-oriented programming using classes.'
-        },
-        {
-            code: 'WDD 131',
-            type: 'WDD',
-            credits: 2,
-            title: 'Dynamic Web Fundamentals',
-            desc: 'Web development with dynamic content and JavaScript.'
-        },
-        {
-            code: 'WDD 231',
-            type: 'WDD',
-            credits: 2,
-            title: 'Web Frontend Development I',
-            desc: 'Frontend web development using HTML, CSS, and JavaScript.'
-        }
+        { code: 'CSE 110', type: 'CSE', credits: 2, title: 'Programming Building Blocks', desc: 'Intro to programming.' },
+        { code: 'WDD 130', type: 'WDD', credits: 2, title: 'Web Fundamentals', desc: 'Intro to web development.' },
+        { code: 'CSE 111', type: 'CSE', credits: 2, title: 'Programming with Functions', desc: 'Intermediate programming.' },
+        { code: 'CSE 210', type: 'CSE', credits: 2, title: 'Programming with Classes', desc: 'OOP with classes.' },
+        { code: 'WDD 131', type: 'WDD', credits: 2, title: 'Dynamic Web Fundamentals', desc: 'Dynamic web content.' },
+        { code: 'WDD 231', type: 'WDD', credits: 2, title: 'Web Frontend Development I', desc: 'Frontend web dev.' }
     ];
 
     const boxButton = document.querySelector('.boxButton');
@@ -100,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             filtered = courses.filter(c => c.type === filter);
         }
         boxCertificate.innerHTML = filtered.map(c =>
-            `<div class="courseCard" data-code="${c.code}">
+            `<div class="courseCard" tabindex="0" data-code="${c.code}">
                 <h3>${c.code}</h3>
             </div>`
         ).join('');

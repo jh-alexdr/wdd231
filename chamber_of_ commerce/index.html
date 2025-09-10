@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Course Home Page">
     <meta name="author" content="Jhon A. Tobar">
-    <title> WDD231 - Course Home Page</title>
+    <title>WDD231 - Course Home Page</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -18,21 +18,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img src="img/tlogo.svg" alt="Site Logo" width="512" height="512">
-        <span>Jhon A. Tobar 👨‍💻</span>
-        <button id="nav-button" class="hamburger" arial-label="navigation"> ::before </button>
+        <img src="images/tlogo.svg" alt="Site Logo" width="48" height="48">
+        <span class="site-title">Jhon A. Tobar <span class="emoji">👨‍💻</span></span>
+        <button id="nav-button" class="hamburger" aria-label="Open navigation">&#9776;</button>
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li class="current"> <a href="index.html">Home</a></li>
+            <li class="current"><a href="index.html">Home</a></li>
             <li><a href="chamber.html">Chamber Project</a></li>
             <li><a href="final.html">Final Project</a></li>
         </ul>
@@ -42,7 +39,8 @@
         <div class="main-grid">
             <section class="about-me">
                 <h2>About Me</h2>
-                <p>Hello! I'm Jhon Tobar from Quito, Ecuador. I'm currently studying at BYU Pathway Worldwide for a
+                <p>
+                    Hello! I'm Jhon Tobar from Quito, Ecuador. I'm currently studying at BYU Pathway Worldwide for a
                     Bachelor's degree in
                     Professional Studies and pursuing my certification in Web and Computer Programming. I have
                     experience teaching English
@@ -50,8 +48,8 @@
                     climbing. It's a
                     constant challenge to learn this new language of programming and web development, but I'm passionate
                     about learning it
-                    and pursuing new skills in my life.
-                    Welcome to my web page!</p>
+                    and pursuing new skills in my life. Welcome to my web page!
+                </p>
             </section>
             <section class="student-photo">
                 <h2>Student Photo</h2>
@@ -61,58 +59,36 @@
         <section class="certificate-box">
             <h2>Web Certificate Courses</h2>
             <div class="boxButton">
-                <class="courseButton" value="all" title="Filter button">All Courses</button>
-                    <class="courseButton" value="cse" title="Filter button">CSE Courses</button>
-                        <class="courseButton" value="wdd" title="Filter button">WDD Courses</button>
+                <!-- Botones generados por JS -->
             </div>
             <div class="boxCertificate">
-                <div class="courseCard" data-course="CSE" data-credit="2">
-                    <h3>CSE 110</h3>
-                </div>
-                <div class="courseCard" data-course="WDD" data-credit="2">
-                    <h3>WDD 130</h3>
-                </div>
-                <div class="courseCard" data-course="CSE" data-credit="2">
-                    <h3>CSE 111</h3>
-                </div>
-                <div class="courseCard" data-course="CSE" data-credit="2">
-                    <h3>CSE 210</h3>
-                </div>
-                <div class="courseCard" data-course="WDD" data-credit="2">
-                    <h3>WDD 131</h3>
-                </div>
-                <div class="courseCard" data-course="WDD" data-credit="2">
-                    <h3>CSE 231</h3>
-                </div>
+                <!-- Tarjetas generadas por JS -->
             </div>
             <p id="totalCredits">The total credits for course listed above is 6</p>
         </section>
     </main>
-
     <!-- Dialog for course details -->
     <dialog id="courseDialog">
         <button id="closeDialog" aria-label="Close">&times;</button>
         <div id="dialogContent"></div>
     </dialog>
-
     <footer>
-        <div class=social-links>
-            <a href="https://jh-alexdr.github.io/wdd231/" target="_blank">GitHub</a>
-            <img src="images/github.svg" alt="github" width="16" height="16">
-
-            <a href="www.linkedin.com/in/jhon-tobar-a0188b298" target="_blank">LinkedIn</a>
-            <img src="images/linkedin.svg" alt="linkedin" width="16" height="16">
-
-            <a href="https://www.facebook.com/jhon.a.t.7/?locale=es_LA" target="_blank">Facebook</a>
-            <img src="images/facebook.svg" alt="facebook" width="16" height="16">
+        <div class="social-links">
+            <a href="https://jh-alexdr.github.io/wdd231/" target="_blank" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/jhon-tobar-a0188b298" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+            </a>
+            <a href="https://www.facebook.com/jhon.a.t.7/?locale=es_LA" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.svg" alt="Facebook" width="32" height="32">
+            </a>
         </div>
-
         <div class="contact-info">
-            &copy; <span id="currentYear">2025</span>👌 Jhon A. Tobar, Quito, Ecuador👌
+            &copy; <span id="currentYear"></span> Jhon A. Tobar, Quito, Ecuador
         </div>
         <p id="lastModified"></p>
     </footer>
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>

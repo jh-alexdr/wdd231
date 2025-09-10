@@ -1,28 +1,28 @@
+/* --- Cambios para small.css --- */
+
 :root {
     --font-main: 'Josefin Sans', Arial, sans-serif;
-    --font-size-base: 1rem;
-    --font-size-h1: 1.5rem;
-    --font-size-h2: 1.1rem;
-    --color-bg: #f9f9f9;
-    --color-header: #222;
-    --color-nav: #333;
-    --color-accent: #222;
-    --color-section-header: #222;
+    --color-header: #f8bbd0;
+    --color-nav: #f8bbd0;
+    --color-nav-text: #222;
+    --color-nav-hover: #f06292;
+    --color-section-header: #f06292;
     --color-section-header-text: #fff;
     --color-card: #fff;
-    --color-border: #bbb;
-    --color-footer: #222;
-    --color-footer-text: #eee;
+    --color-border: #e0e0e0;
+    --color-footer: #f8bbd0;
+    --color-footer-text: #222;
+    --color-accent: #f06292;
+    --color-hover: #ffe0f0;
 }
 
 html,
 body {
     font-family: var(--font-main);
-    font-size: var(--font-size-base);
-    background: var(--color-bg);
+    background: #faf6fb;
+    color: #222;
     margin: 0;
     padding: 0;
-    color: #222;
 }
 
 body {
@@ -34,10 +34,10 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background: var(--color-header);
-    color: #fff;
-    padding: 0.5rem 1rem;
+    color: var(--color-nav-text);
+    padding: 0.5rem 1.5rem;
+    gap: 1rem;
 }
 
 header img {
@@ -53,10 +53,17 @@ header span {
     margin-left: 0.5rem;
 }
 
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-nav-text);
+    letter-spacing: 1px;
+}
+
 .hamburger {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-nav-text);
     font-size: 2rem;
     cursor: pointer;
     display: block;
@@ -64,6 +71,7 @@ header span {
 
 nav {
     background: var(--color-nav);
+    box-shadow: 0 2px 4px #0001;
 }
 
 nav ul {
@@ -72,22 +80,28 @@ nav ul {
     padding: 0;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 nav li {
-    border-bottom: 1px solid var(--color-border);
+    margin: 0;
 }
 
 nav a {
-    color: #fff;
+    color: var(--color-nav-text);
     text-decoration: none;
     display: block;
-    padding: 0.75rem 1rem;
-    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
 }
 
-nav .current a {
-    background: var(--color-accent);
+nav .current a,
+nav a:hover,
+nav a:focus {
+    background: var(--color-nav-hover);
+    color: #fff;
 }
 
 main {
@@ -102,15 +116,18 @@ h1 {
 .main-grid {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .about-me,
 .student-photo {
     background: var(--color-card);
-    border-radius: 0;
-    border: 1px solid var(--color-border);
-    margin-bottom: 1rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    margin: 0 auto;
+    max-width: 95vw;
 }
 
 .about-me h2,
@@ -118,133 +135,123 @@ h1 {
 .certificate-box h2 {
     background: var(--color-section-header);
     color: var(--color-section-header-text);
+    width: 100%;
     margin: 0;
-    padding: 0.5rem;
-    font-size: var(--font-size-h2);
-    font-weight: 600;
-    letter-spacing: 1px;
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.about-me p {
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    font-size: 1.08rem;
 }
 
 .student-photo img {
     display: block;
-    margin: 1rem auto;
-    border-radius: 8px;
+    margin: 1.5rem auto;
+    border-radius: 10px;
     width: 180px;
     height: 180px;
     object-fit: cover;
     background: #eee;
+    border: 2px solid var(--color-border);
 }
 
 .certificate-box {
     background: var(--color-card);
-    border: 1px solid var(--color-border);
-    border-radius: 0;
-    margin-bottom: 1rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    margin: 0 auto 2rem auto;
+    max-width: 98vw;
+    padding-bottom: 1rem;
 }
 
 .boxButton {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem 0;
+    gap: 1rem;
+    margin: 1.2rem 0;
 }
 
 .courseButton {
     background: var(--color-section-header);
     color: #fff;
     border: none;
-    border-radius: 0;
+    border-radius: 6px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     font-family: var(--font-main);
     font-weight: 600;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px #0001;
 }
 
 .courseButton.active,
-.courseButton:hover {
-    background: #444;
+.courseButton:hover,
+.courseButton:focus {
+    background: var(--color-accent);
+    color: #fff;
+    box-shadow: 0 0 8px var(--color-accent);
+    outline: none;
 }
 
 .boxCertificate {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .courseCard {
-    background: #f1f1f1;
-    border: 1px solid var(--color-border);
-    border-radius: 0;
-    padding: 0.5rem;
-    font-size: 1rem;
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     text-align: center;
     cursor: pointer;
-    transition:
-        background 0.2s,
-        border-color 0.2s,
-        box-shadow 0.2s;
+    font-weight: 600;
+    min-width: 150px;
+    margin: 0.3rem 0;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px #0001;
 }
 
 .courseCard:hover,
 .courseCard:focus {
-    background: #e0eaff;
-    border-color: #0077b6;
-    box-shadow: 0 0 8px #0077b655;
+    background: var(--color-hover);
+    color: var(--color-section-header);
+    box-shadow: 0 0 12px var(--color-accent);
     outline: none;
 }
 
 #totalCredits {
-    font-weight: normal;
+    font-weight: 600;
     margin-top: 1rem;
     text-align: center;
-}
-
-footer {
-    background: var(--color-footer);
-    color: var(--color-footer-text);
-    text-align: center;
-    padding: 1rem 0 0.5rem 0;
-    font-size: 0.95rem;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.social-links a {
-    color: var(--color-footer-text);
-    text-decoration: none;
-}
-
-.social-links img {
-    vertical-align: middle;
-}
-
-.contact-info {
-    margin-bottom: 0.25rem;
-}
-
-#lastModified {
-    font-size: 0.85rem;
-    color: #bbb;
+    font-style: italic;
+    color: #333;
+    font-size: 1.1rem;
 }
 
 /* Dialog styles */
 dialog {
     border: none;
-    border-radius: 8px;
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-radius: 12px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
     box-shadow: 0 4px 32px #0004;
     max-width: 350px;
     width: 90vw;
-    font-family: var(--font-main, 'Josefin Sans', Arial, sans-serif);
+    font-family: var(--font-main);
+    position: relative;
 }
 
 #closeDialog {
@@ -254,14 +261,60 @@ dialog {
     background: none;
     border: none;
     font-size: 2rem;
-    color: #222;
+    color: var(--color-section-header);
     cursor: pointer;
 }
 
-@media (min-width: 700px) {
-    dialog {
-        max-width: 400px;
-    }
+footer {
+    background: var(--color-footer);
+    color: var(--color-footer-text);
+    text-align: center;
+    padding: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #f06292;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.social-links a:hover img,
+.social-links a:focus img {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px var(--color-accent));
+}
+
+.social-links img {
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin: 0 0.2rem;
+    cursor: pointer;
+}
+
+.contact-info {
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    color: var(--color-footer-text);
+}
+
+#lastModified {
+    font-size: 0.95rem;
+    color: #888;
+    margin-top: 0.5rem;
 }
 
 /* Hide dialogs by default */
