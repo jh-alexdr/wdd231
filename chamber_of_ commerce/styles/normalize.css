@@ -1,0 +1,52 @@
+/* Normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document defaults */
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections */
+body {
+    margin: 0;
+}
+
+/* Grouping content */
+hr {
+    height: 0; /* 1 */
+    color: inherit; /* 2 */
+    border-top: 1px solid; /* 3 */
+}
+
+/* Text-level semantics */
+a {
+    background-color: transparent; /* 1 */
+}
+
+/* Embedded content */
+img {
+    max-width: 100%; /* 1 */
+    height: auto; /* 2 */
+}
+
+/* Forms */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 2 */
+    line-height: inherit; /* 3 */
+}
+
+/* Interactive */
+button,
+[role="button"] {
+    cursor: pointer; /* 1 */
+}
+
+/* Accessibility */
+[hidden] {
+    display: none; /* 1 */
+}
