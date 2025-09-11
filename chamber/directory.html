@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Business directory Quito Chamber of Commerce. Find local businesses, services, and contacts in Quito.">
+    <meta name="author" content="Jhon A. Tobar">
+
+    <title>WDD231 - Chamber Directory</title>
+    <link rel="icon" href="chamber.ico">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="WDD231 - Chamber Directory">
+    <meta property="og:description"
+        content="Business directory for Quito Chamber of Commerce. Find local businesses, services, and contacts in Quito.">
+    <meta property="og:image" content="https://jh-alexdr.github.io/wdd231/images/tlogo.svg">
+    <meta property="og:url" content="https://jh-alexdr.github.io/wdd231/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Jhalex Commerce/h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" class="current">Directory</a></li>
+                <!-- Agrega más enlaces si es necesario -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Business Directory</h2>
+        <div class="directory-controls">
+            <button id="gridView" class="active">Grid View</button>
+            <button id="listView">List View</button>
+        </div>
+        <section id="directory" class="grid">
+            <!-- Aquí se mostrarán los negocios con JS -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Jhon A. Tobar • [Tu Ciudad]</p>
+    </footer>
+    <script>
+        // Año dinámico en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
