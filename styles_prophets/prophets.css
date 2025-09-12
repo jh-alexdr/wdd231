@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
-    background: #f8fafc;
-    /* Light Gray */
+    background: #f1f5f9;
+    /* Soft slate background */
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-weight: 400;
 }
 
 header h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #14b8a6;
-    /* Teal */
+    color: #22334a;
+    /* Deep blue */
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     font-family: 'Poppins', Arial, sans-serif;
     letter-spacing: 2px;
+    font-weight: 700;
 }
 
 #cards {
@@ -28,45 +30,55 @@ header h1 {
     padding: 2rem;
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 0 24px #14b8a633;
+    box-shadow: 0 0 24px #2ecc4040;
+    /* Greenish shadow */
 }
 
 #cards section {
-    background: #e0f2fe;
-    /* Soft Teal */
-    border: 2px solid #fb7185;
-    /* Coral */
+    background: #e2e8f0;
+    /* Light slate */
+    border: 2px solid #22334a;
+    /* Deep blue border */
     border-radius: 10px;
     padding: 1rem 1rem 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 12px #fb718566;
+    box-shadow: 0 2px 12px #2ecc4066;
+    /* Greenish shadow */
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#cards section:last-child {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #cards section:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 6px 24px #14b8a6;
+    box-shadow: 0 6px 24px #2ecc40;
+    /* Stronger green shadow on hover */
 }
 
 #cards h2 {
     font-size: 1.2rem;
-    color: #fb7185;
-    /* Coral */
+    color: #22334a;
+    /* Deep blue */
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
+    font-weight: 700;
 }
 
 #cards p {
     margin: 0.2rem 0;
     color: #334155;
-    /* Slate */
+    /* Slate gray */
     font-size: 1rem;
     text-align: center;
     font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
 }
 
 #cards img {
@@ -75,14 +87,16 @@ header h1 {
     width: 140px;
     height: 180px;
     object-fit: cover;
-    box-shadow: 0 2px 8px #fb7185;
+    box-shadow: 0 2px 8px #2ecc4066;
+    /* Greenish shadow */
 }
 
 footer {
     text-align: center;
-    color: #14b8a6;
+    color: #22334a;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
 }
