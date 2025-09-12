@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Business directory Quito Chamber of Commerce. Find local businesses, services, and contacts in Quito.">
+        content="Connecting people with innovation. We make technology simple, 
+                 reliable, and accessible so you can work smarter and live better.">
     <meta name="author" content="Jhon A. Tobar">
 
-    <title>WDD231 - Chamber Directory</title>
+    <title>WDD231 - Jhalex Technology</title>
     <link rel="icon" href="chamber.ico">
 
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="WDD231 - Chamber Directory">
+    <meta property="og:title" content="WDD231 - Jhalex Technology">
     <meta property="og:description"
-        content="Business directory for Quito Chamber of Commerce. Find local businesses, services, and contacts in Quito.">
+        content="Connecting people with innovation. We make technology simple, 
+                 reliable, and accessible so you can work smarter and live better.">
     <meta property="og:image" content="https://jh-alexdr.github.io/wdd231/images/tlogo.svg">
     <meta property="og:url" content="https://jh-alexdr.github.io/wdd231/">
     <meta property="og:type" content="website">
@@ -26,13 +28,13 @@
 <body>
     <header>
         <h1>Jhalex Commerce/h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="directory.html" class="current">Directory</a></li>
-                <!-- Agrega más enlaces si es necesario -->
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="directory.html" class="current">Directory</a></li>
+                    <!-- Agrega más enlaces si es necesario -->
+                </ul>
+            </nav>
     </header>
     <main>
         <h2>Business Directory</h2>
@@ -45,12 +47,34 @@
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentYear"></span> Jhon A. Tobar • [Tu Ciudad]</p>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <strong>Jhalex Commerce</strong><br>
+                Ayapamba Street<br>
+                Quito, Ecuador<br>
+                info@jhalexcommerce.org<br>
+                (593) 992957913
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/jhon.a.t.7/?locale=es_LA" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook" width="32" height="32">
+                </a>
+                <a href="https://jh-alexdr.github.io/wdd231/" target="_blank" aria-label="GitHub">
+                    <img src="https://jh-alexdr.github.io/wdd231/" alt="GitHub" width="32" height="32">
+                </a>
+                <a href="https://www.linkedin.com/in/jhon-tobar-a0188b298" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
+                </a>
+            </div>
+            <div class="footer-dev">
+                WDD231 Class Project<br>
+                Jhon A. Tobar<br>
+                &copy; <span id="currentYear"></span> Jhalex Commerce<br>
+                Last Modification: <span id="lastModified"></span>
+            </div>
+        </div>
     </footer>
-    <script>
-        // Año dinámico en el footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+    
 </body>
 
 </html>

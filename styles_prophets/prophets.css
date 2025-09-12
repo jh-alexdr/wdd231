@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Josefin+Sans:wght@400;700&display=swap');
+
+body {
+    background: #ede9fe;
+    /* Lavender */
+    font-family: 'Josefin Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6d28d9;
+    /* Royal Purple */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    background: #f9fafb;
+    /* Soft White */
+    border-radius: 16px;
+    box-shadow: 0 0 24px #a78bfa;
+}
+
+#cards section {
+    background: #ede9fe;
+    /* Lavender */
+    border: 2px solid #a78bfa;
+    /* Accent */
+    border-radius: 10px;
+    padding: 1rem 1rem 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 12px #a78bfa;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#cards section:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px #6d28d9;
+}
+
+#cards h2 {
+    font-size: 1.2rem;
+    color: #6d28d9;
+    /* Royal Purple */
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+#cards p {
+    margin: 0.2rem 0;
+    color: #312e81;
+    /* Deep Purple for text */
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Josefin Sans', Arial, sans-serif;
+}
+
+#cards img {
+    margin-top: 1rem;
+    border-radius: 6px;
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px #a78bfa;
+}
+
+footer {
+    text-align: center;
+    color: #6d28d9;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: 'Josefin Sans', Arial, sans-serif;
+}
