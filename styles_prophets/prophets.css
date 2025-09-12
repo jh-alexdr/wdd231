@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
-    background: #ede9fe;
-    /* Lavender */
-    font-family: 'Josefin Sans', Arial, sans-serif;
+    background: #f8fafc;
+    /* Light Gray */
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -11,11 +11,11 @@ body {
 header h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: #6d28d9;
-    /* Royal Purple */
+    color: #14b8a6;
+    /* Teal */
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     letter-spacing: 2px;
 }
 
@@ -26,48 +26,47 @@ header h1 {
     max-width: 1200px;
     margin: 0 auto 2rem auto;
     padding: 2rem;
-    background: #f9fafb;
-    /* Soft White */
+    background: #fff;
     border-radius: 16px;
-    box-shadow: 0 0 24px #a78bfa;
+    box-shadow: 0 0 24px #14b8a633;
 }
 
 #cards section {
-    background: #ede9fe;
-    /* Lavender */
-    border: 2px solid #a78bfa;
-    /* Accent */
+    background: #e0f2fe;
+    /* Soft Teal */
+    border: 2px solid #fb7185;
+    /* Coral */
     border-radius: 10px;
     padding: 1rem 1rem 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 2px 12px #a78bfa;
+    box-shadow: 0 2px 12px #fb718566;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #cards section:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 6px 24px #6d28d9;
+    box-shadow: 0 6px 24px #14b8a6;
 }
 
 #cards h2 {
     font-size: 1.2rem;
-    color: #6d28d9;
-    /* Royal Purple */
+    color: #fb7185;
+    /* Coral */
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    font-family: 'Montserrat', 'Josefin Sans', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     text-align: center;
 }
 
 #cards p {
     margin: 0.2rem 0;
-    color: #312e81;
-    /* Deep Purple for text */
+    color: #334155;
+    /* Slate */
     font-size: 1rem;
     text-align: center;
-    font-family: 'Josefin Sans', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 #cards img {
@@ -76,14 +75,14 @@ header h1 {
     width: 140px;
     height: 180px;
     object-fit: cover;
-    box-shadow: 0 2px 8px #a78bfa;
+    box-shadow: 0 2px 8px #fb7185;
 }
 
 footer {
     text-align: center;
-    color: #6d28d9;
+    color: #14b8a6;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
-    font-family: 'Josefin Sans', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
