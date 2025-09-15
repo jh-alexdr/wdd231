@@ -40,6 +40,27 @@
     </header>
     <main>
         <h2>Business Directory</h2>
+        <div class="info-sections">
+            <section class="events">
+                <h3>Events</h3>
+                <ul id="events-list"></ul>
+            </section>
+            <section class="weather">
+                <h3>Current Weather</h3>
+                <div id="weather-info">
+                    <span id="weather-temp">--°C</span>
+                    <span id="weather-desc">Loading...</span>
+                </div>
+            </section>
+            <section class="forecast">
+                <h3>Weather Forecast</h3>
+                <ul id="forecast-list">
+                    <li>Today: <strong id="forecast-today">--°C</strong></li>
+                    <li>Tomorrow: <strong id="forecast-tomorrow">--°C</strong></li>
+                    <li>Next Day: <strong id="forecast-next">--°C</strong></li>
+                </ul>
+            </section>
+        </div>
         <div class="directory-controls">
             <button id="gridView" class="active" aria-label="Grid View">Grid View</button>
             <button id="listView" aria-label="List View">List View</button>

@@ -201,3 +201,50 @@ main {
         display: flex;
     }
 }
+
+/* Info sections styling */
+.info-sections {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info-sections section {
+    background: #f4f8fb;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 220px;
+    min-width: 220px;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.info-sections h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    background: #22334a;
+    color: #fff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    margin-bottom: 0.7rem;
+    display: inline-block;
+}
+
+#weather-info {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+#weather-temp {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    .info-sections {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
