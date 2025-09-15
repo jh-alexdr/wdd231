@@ -4,7 +4,7 @@
         "address": "Av. Amazonas 1245 Quito, Ecuador",
         "phone": "+593 2-345-6789",
         "website": "https://www.jhalextechnology.com",
-        "image": "jhalex.png",
+        "image": "image1.png",
         "membership": 1
     },
     {
@@ -12,7 +12,7 @@
         "address": "456 Innovation Blvd, Miami FL 33126",
         "phone": "(305) 555-1298",
         "website": "https://www.globaltechsupplies.com",
-        "image": "globaltech.png",
+        "image": "image2.png",
         "membership": 2
     },
     {
@@ -20,7 +20,7 @@
         "address": "Calle 10 #34-56 Bogotá, Colombia",
         "phone": "+57 1-456-7890",
         "website": "https://www.andessoftware.com",
-        "image": "andessoftware.png",
+        "image": "image3.svg",
         "membership": 3
     },
     {
@@ -28,7 +28,7 @@
         "address": "99 Silicon Ave, San Jose CA 95134",
         "phone": "(408) 654-3210",
         "website": "https://www.cloudwavetech.com",
-        "image": "cloudwave.png",
+        "image": "image4.svg",
         "membership": 2
     },
     {
@@ -36,7 +36,7 @@
         "address": "22 Firewall Street, Dallas TX 75201",
         "phone": "(214) 789-4561",
         "website": "https://www.cyberguardsecurity.com",
-        "image": "cyberguard.png",
+        "image": "image5.svg",
         "membership": 1
     },
     {
@@ -44,7 +44,7 @@
         "address": "18 Data Science Plaza, Toronto, Canada",
         "phone": "+1 416-890-2345",
         "website": "https://www.aiinnovatorslab.com",
-        "image": "aiinnovators.png",
+        "image": "image6.svg",
         "membership": 3
     },
     {
@@ -52,7 +52,7 @@
         "address": "500 Tech Park Road, Boston MA 02115",
         "phone": "(617) 432-7890",
         "website": "https://www.quantumhardwaresystems.com",
-        "image": "quantumhardware.png",
+        "image": "image7.png",
         "membership": 2
     },
     {
@@ -60,7 +60,7 @@
         "address": "33 Broadband Lane, Seattle WA 98109",
         "phone": "(206) 777-8888",
         "website": "https://www.netlinksolutions.com",
-        "image": "netlink.png",
+        "image": "image8.svg",
         "membership": 1
     }
 ]

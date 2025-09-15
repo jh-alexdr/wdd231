@@ -1,46 +1,44 @@
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    background: #f4f7fa;
-    border-top: 2px solid #22334a;
-    padding: 2rem 1rem 1rem 1rem;
-    gap: 2rem;
-    font-size: 1rem;
-}
+/* Reset/normalize styles are already linked */
 
-.footer-contact,
-.footer-dev {
-    flex: 1 1 200px;
-    min-width: 180px;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f8fafc;
     color: #22334a;
-    line-height: 1.6;
 }
 
-.footer-contact strong {
-    font-size: 1.1rem;
+header,
+footer {
+    background: #22334a;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }
 
-.footer-social {
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
     justify-content: center;
-    flex: 1 1 120px;
+    gap: 2rem;
 }
 
-.footer-social a img {
-    width: 36px;
-    height: 36px;
-    filter: drop-shadow(0 0 6px #3e92cc);
-    transition: filter 0.2s, transform 0.2s;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.footer-social a:hover img,
-.footer-social a:focus img {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 12px #2ecc40);
+nav a.current,
+nav a:hover {
+    color: #3e92cc;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 .directory-controls {
@@ -54,7 +52,7 @@
     background: #fff;
     border: 2px solid #3e92cc;
     color: #22334a;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1.2rem;
     border-radius: 8px;
     cursor: pointer;
@@ -128,11 +126,44 @@
     gap: 0.5rem;
 }
 
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contact,
+.footer-social,
+.footer-dev {
+    margin: 1rem 0;
+}
+
+.footer-social a img {
+    margin: 0 0.3rem;
+    vertical-align: middle;
+}
+
+/* Hamburger menu styles */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    position: absolute;
+    right: 0;
+    top: 1.2rem;
+}
+
 @media (max-width: 700px) {
-    .footer-content {
+    nav ul {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         gap: 1rem;
     }
 
@@ -140,8 +171,33 @@
         grid-template-columns: 1fr;
     }
 
-    .directory-controls button {
-        font-size: 1.2rem;
-        padding: 0.5rem 0.8rem;
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #22334a;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        width: 180px;
+        box-shadow: 0 2px 8px #0002;
+        z-index: 10;
+    }
+
+    nav ul.open {
+        display: flex;
     }
 }

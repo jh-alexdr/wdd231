@@ -10,6 +10,13 @@
     const gridBtn = document.getElementById('gridView');
     const listBtn = document.getElementById('listView');
 
+    // Membership level names for your data
+    const membershipNames = {
+        1: "Member",
+    2: "Silver",
+    3: "Gold"
+    };
+
     async function getMembers() {
             const response = await fetch('data/members.json');
     const members = await response.json();
@@ -35,13 +42,13 @@
             const card = document.createElement('div');
             card.className = 'member-card';
             card.innerHTML = `
-                        <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
-                        <h3>${member.name}</h3>
-                        <p>${member.address}</p>
-                        <p>${member.phone}</p>
-                        <a href="${member.website}" target="_blank">${member.website}</a>
-                        <p class="membership">Membership: ${['Member', 'Silver', 'Gold'][member.membership - 1]}</p>
-                    `;
+                    <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <a href="${member.website}" target="_blank">${member.website}</a>
+                    <p class="membership">Membership: ${membershipNames[member.membership] || "Member"}</p>
+                `;
             directory.appendChild(card);
         });
             } else {
@@ -49,17 +56,25 @@
             const row = document.createElement('div');
             row.className = 'member-row';
             row.innerHTML = `
-                        <strong>${member.name}</strong> | 
-                        ${member.address} | 
-                        ${member.phone} | 
-                        <a href="${member.website}" target="_blank">${member.website}</a> | 
-                        Membership: ${['Member', 'Silver', 'Gold'][member.membership - 1]}
-                    `;
+                    <strong>${member.name}</strong> | 
+                    ${member.address} | 
+                    ${member.phone} | 
+                    <a href="${member.website}" target="_blank">${member.website}</a> | 
+                    Membership: ${membershipNames[member.membership] || "Member"}
+                `;
             directory.appendChild(row);
         });
             }
         }
 
     getMembers();
+
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+        navList.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', navList.classList.contains('open'));
+    });
     });
 </script>
