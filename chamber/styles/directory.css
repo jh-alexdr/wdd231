@@ -65,6 +65,14 @@ main {
     color: #fff;
 }
 
+#directory {
+    /* box-shadow: 0 8px 32px 0 #2ecc4066;  Remove this line */
+    border-radius: 18px;
+    background: #f8fafc;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
 #directory.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -235,7 +243,8 @@ main {
     padding: 1rem;
     flex: 1 1 220px;
     min-width: 220px;
-    box-shadow: 0 2px 8px #0001;
+    box-shadow: 0 4px 18px 0 #2ecc4066;
+    /* Green shadow */
 }
 
 .info-sections h3 {
@@ -262,6 +271,8 @@ main {
 #weather-icon {
     margin-top: 1rem;
     display: block;
+    width: 80px;
+    height: 80px;
 }
 
 #weather-temp {
