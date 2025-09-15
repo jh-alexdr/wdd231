@@ -82,7 +82,27 @@ async function loadWeather() {
     // Quito, Ecuador coordinates
     const lat = -0.1807;
     const lon = -78.4678;
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max&timezone=auto`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,weathercode&timezone=auto`;
+
+    // Simple mapping for demonstration (expand as needed)
+    const weatherIcons = {
+        0: "weather-sunny.svg",      // Clear sky
+        1: "weather-partly.svg",     // Mainly clear
+        2: "weather-partly.svg",     // Partly cloudy
+        3: "weather-cloudy.svg",     // Overcast
+        45: "weather-fog.svg",       // Fog
+        48: "weather-fog.svg",       // Depositing rime fog
+        51: "weather-drizzle.svg",   // Drizzle: Light
+        53: "weather-drizzle.svg",   // Drizzle: Moderate
+        55: "weather-drizzle.svg",   // Drizzle: Dense
+        61: "weather-rain.svg",      // Rain: Slight
+        63: "weather-rain.svg",      // Rain: Moderate
+        65: "weather-rain.svg",      // Rain: Heavy
+        80: "weather-showers.svg",   // Showers: Slight
+        81: "weather-showers.svg",   // Showers: Moderate
+        82: "weather-showers.svg",   // Showers: Violent
+        // ...add more as needed
+    };
 
     try {
         const response = await fetch(url);
@@ -90,6 +110,12 @@ async function loadWeather() {
         // Current weather
         document.getElementById('weather-temp').textContent = `${data.current_weather.temperature}°C`;
         document.getElementById('weather-desc').textContent = `Wind: ${data.current_weather.windspeed} km/h`;
+
+        // Set weather icon
+        const code = data.current_weather.weathercode;
+        const iconFile = weatherIcons[code] || "weather-default.svg";
+        document.getElementById('weather-icon').src = `images/${iconFile}`;
+
         // Forecast
         document.getElementById('forecast-today').textContent = `${data.daily.temperature_2m_max[0]}°C`;
         document.getElementById('forecast-tomorrow').textContent = `${data.daily.temperature_2m_max[1]}°C`;
