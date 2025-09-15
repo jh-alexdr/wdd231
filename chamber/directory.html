@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Connecting people with innovation. We make technology simple, 
+    <meta name="description" content="Connecting people with innovation. We make technology simple, 
                  reliable, and accessible so you can work smarter and live better.">
     <meta name="author" content="Jhon A. Tobar">
 
@@ -14,36 +13,38 @@
 
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="WDD231 - Jhalex Technology">
-    <meta property="og:description"
-        content="Connecting people with innovation. We make technology simple, 
+    <meta property="og:description" content="Connecting people with innovation. We make technology simple, 
                  reliable, and accessible so you can work smarter and live better.">
     <meta property="og:image" content="https://jh-alexdr.github.io/wdd231/images/tlogo.svg">
     <meta property="og:url" content="https://jh-alexdr.github.io/wdd231/">
     <meta property="og:type" content="website">
 
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/directory.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Jhalex Commerce/h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="directory.html" class="current">Directory</a></li>
-                    <!-- Agrega más enlaces si es necesario -->
-                </ul>
-            </nav>
+        <h1>Jhalex Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" class="current">Directory</a></li>
+                <!-- Add more links if needed -->
+            </ul>
+        </nav>
     </header>
     <main>
         <h2>Business Directory</h2>
         <div class="directory-controls">
-            <button id="gridView" class="active">Grid View</button>
-            <button id="listView">List View</button>
+            <button id="gridView" class="active" aria-label="Grid View">Grid View</button>
+            <button id="listView" aria-label="List View">List View</button>
         </div>
         <section id="directory" class="grid">
-            <!-- Aquí se mostrarán los negocios con JS -->
+            <!-- Business directory will be loaded here by JS -->
         </section>
     </main>
     <footer>
@@ -60,7 +61,7 @@
                     <img src="images/facebook.svg" alt="Facebook" width="32" height="32">
                 </a>
                 <a href="https://jh-alexdr.github.io/wdd231/" target="_blank" aria-label="GitHub">
-                    <img src="https://jh-alexdr.github.io/wdd231/" alt="GitHub" width="32" height="32">
+                    <img src="images/github.svg" alt="GitHub" width="32" height="32">
                 </a>
                 <a href="https://www.linkedin.com/in/jhon-tobar-a0188b298" target="_blank" aria-label="LinkedIn">
                     <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32">
@@ -74,7 +75,6 @@
             </div>
         </div>
     </footer>
-    
 </body>
 
 </html>
