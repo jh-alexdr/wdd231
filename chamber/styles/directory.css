@@ -1,7 +1,7 @@
 /* Reset/normalize styles are already linked */
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     background: #f8fafc;
     color: #22334a;
