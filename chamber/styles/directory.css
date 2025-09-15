@@ -79,15 +79,15 @@ main {
     gap: 2rem;
 }
 
-.member-card {
-    background: #e3f0fa;
-    /* Light blue card */
-    border: 1.5px solid #7bb6e6;
-    /* Muted blue border */
+.member-card,
+.member-row {
     border-radius: 16px;
-    box-shadow: 0 4px 18px 0 #2563eb33;
-    /* Deeper blue shadow */
+    background: #e3f0fa;
     padding: 1.5rem 1rem;
+}
+
+.member-card {
+    box-shadow: 0 4px 18px 0 #2563eb33;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -132,9 +132,7 @@ main {
 }
 
 .member-row {
-    background: #e9eef5;
-    border-radius: 8px;
-    padding: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.1rem;
     color: #22334a;
     display: flex;
@@ -226,6 +224,11 @@ main {
     nav ul.open {
         display: flex;
     }
+
+    .directory-controls button {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+    }
 }
 
 /* Info sections styling */
@@ -279,6 +282,16 @@ main {
     font-weight: bold;
     font-size: 1.5rem;
     margin-right: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 @media (max-width: 900px) {
