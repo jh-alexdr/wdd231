@@ -1,58 +1,66 @@
 [
     {
-        "name": "Idaho Websites",
-        "address": "2115 S Vista Avenue Boise ID 83705",
-        "phone": "(208) 342-9386",
-        "website": "https://idahowebsites.com/",
-        "image": "idweb.png",
-        "membership": 3
-    },
-    {
-        "name": "Surge Web Design",
-        "address": "4072 E Arch Drive Meridian ID 83646",
-        "phone": "(208) 631-0640",
-        "website": "https://www.surgewebdesign.com/",
-        "image": "surgeweb.png",
-        "membership": 2
-    },
-    {
-        "name": "Graphic Zen",
-        "address": "1788 E Summerplace Court Meridian ID 83646",
-        "phone": "(208) 631-4984",
-        "website": "https://graphiczen.com/",
-        "image": "graphiczen.png",
+        "name": "Jhalex Technology Solutions",
+        "address": "Av. Amazonas 1245 Quito, Ecuador",
+        "phone": "+593 2-345-6789",
+        "website": "https://www.jhalextechnology.com",
+        "image": "jhalex.png",
         "membership": 1
     },
     {
-        "name": "Peppershock Media",
-        "address": "1215 3rd Street Nampa ID 83651",
-        "phone": "(208) 461-5070",
-        "website": "https://www.peppershock.com/",
-        "image": "peppershock.png",
+        "name": "Global Tech Supplies",
+        "address": "456 Innovation Blvd, Miami FL 33126",
+        "phone": "(305) 555-1298",
+        "website": "https://www.globaltechsupplies.com",
+        "image": "globaltech.png",
         "membership": 2
     },
     {
-        "name": "Flash Tech Services",
-        "address": "Star Idaho 83669",
-        "phone": "(208) 488-5810",
-        "website": "https://flashtechnicalservices.com/",
-        "image": "flashtech.png",
-        "membership": 1
-    },
-    {
-        "name": "Metro Express Car Wash, LLC",
-        "address": "1725 E Overland Road Meridian ID 83642",
-        "phone": "(208) 888-4073",
-        "website": "https://www.metroexpresscarwash.com/",
-        "image": "metroexpress.png",
+        "name": "Andes Software Solutions",
+        "address": "Calle 10 #34-56 Bogotá, Colombia",
+        "phone": "+57 1-456-7890",
+        "website": "https://www.andessoftware.com",
+        "image": "andessoftware.png",
         "membership": 3
     },
     {
-        "name": "Roaring Springs",
-        "address": "400 W Overland Rd, Meridian, ID 83642",
-        "phone": "(208) 884-8842",
-        "website": "https://roaringsprings.com/",
-        "image": "roaring.png",
+        "name": "CloudWave Technologies",
+        "address": "99 Silicon Ave, San Jose CA 95134",
+        "phone": "(408) 654-3210",
+        "website": "https://www.cloudwavetech.com",
+        "image": "cloudwave.png",
         "membership": 2
+    },
+    {
+        "name": "CyberGuard Security",
+        "address": "22 Firewall Street, Dallas TX 75201",
+        "phone": "(214) 789-4561",
+        "website": "https://www.cyberguardsecurity.com",
+        "image": "cyberguard.png",
+        "membership": 1
+    },
+    {
+        "name": "AI Innovators Lab",
+        "address": "18 Data Science Plaza, Toronto, Canada",
+        "phone": "+1 416-890-2345",
+        "website": "https://www.aiinnovatorslab.com",
+        "image": "aiinnovators.png",
+        "membership": 3
+    },
+    {
+        "name": "Quantum Hardware Systems",
+        "address": "500 Tech Park Road, Boston MA 02115",
+        "phone": "(617) 432-7890",
+        "website": "https://www.quantumhardwaresystems.com",
+        "image": "quantumhardware.png",
+        "membership": 2
+    },
+    {
+        "name": "NetLink Solutions",
+        "address": "33 Broadband Lane, Seattle WA 98109",
+        "phone": "(206) 777-8888",
+        "website": "https://www.netlinksolutions.com",
+        "image": "netlink.png",
+        "membership": 1
     }
 ]
