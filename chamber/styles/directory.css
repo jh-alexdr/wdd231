@@ -250,8 +250,18 @@ main {
 }
 
 #weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 110px;
     font-size: 1.2rem;
     margin-top: 0.5rem;
+}
+
+#weather-icon {
+    margin-top: 1rem;
+    display: block;
 }
 
 #weather-temp {

@@ -86,21 +86,21 @@ async function loadWeather() {
 
     // Simple mapping for demonstration (expand as needed)
     const weatherIcons = {
-        0: "weather-sunny.svg",      // Clear sky
-        1: "weather-partly.svg",     // Mainly clear
-        2: "weather-partly.svg",     // Partly cloudy
-        3: "weather-cloudy.svg",     // Overcast
-        45: "weather-fog.svg",       // Fog
-        48: "weather-fog.svg",       // Depositing rime fog
-        51: "weather-drizzle.svg",   // Drizzle: Light
-        53: "weather-drizzle.svg",   // Drizzle: Moderate
-        55: "weather-drizzle.svg",   // Drizzle: Dense
-        61: "weather-rain.svg",      // Rain: Slight
-        63: "weather-rain.svg",      // Rain: Moderate
-        65: "weather-rain.svg",      // Rain: Heavy
-        80: "weather-showers.svg",   // Showers: Slight
-        81: "weather-showers.svg",   // Showers: Moderate
-        82: "weather-showers.svg",   // Showers: Violent
+        0: "weather.svg",
+        1: "weather.svg",
+        2: "weather.svg",
+        3: "weather.svg",
+        45: "weather.svg",
+        48: "weather.svg",
+        51: "weather.svg",
+        53: "weather.svg",
+        55: "weather.svg",
+        61: "weather.svg",
+        63: "weather.svg",
+        65: "weather.svg",
+        80: "weather.svg",
+        81: "weather.svg",
+        82: "weather.svg"
         // ...add more as needed
     };
 
@@ -113,7 +113,7 @@ async function loadWeather() {
 
         // Set weather icon
         const code = data.current_weather.weathercode;
-        const iconFile = weatherIcons[code] || "weather-default.svg";
+        const iconFile = weatherIcons[code] || "weather.svg";
         document.getElementById('weather-icon').src = `images/${iconFile}`;
 
         // Forecast
