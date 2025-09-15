@@ -157,18 +157,21 @@ main {
     margin: 1rem 0;
 }
 
+/* Footer social icons: bigger and color filter */
 .footer-social a img {
-    width: 48px;
-    height: 48px;
-    margin: 0 0.5rem;
+    width: 60px;
+    height: 60px;
+    margin: 0 0.7rem;
     transition: transform 0.2s, filter 0.2s;
-    filter: grayscale(40%);
+    filter: brightness(0) saturate(100%) invert(32%) sepia(99%) saturate(749%) hue-rotate(175deg) brightness(95%) contrast(92%);
+    /* This filter gives a blue/cyan tint. Adjust hue-rotate for other colors. */
 }
 
 .footer-social a:hover img,
 .footer-social a:focus img {
-    transform: scale(1.15) rotate(-5deg);
-    filter: grayscale(0%) drop-shadow(0 0 8px #3e92cc);
+    transform: scale(1.18) rotate(-5deg);
+    filter: brightness(0) saturate(100%) invert(48%) sepia(99%) saturate(749%) hue-rotate(90deg) brightness(110%) contrast(110%);
+    /* This filter gives a green tint on hover. Adjust as you like! */
 }
 
 /* Hamburger menu styles */
