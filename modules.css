@@ -5,28 +5,31 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
 }
 
 main {
     padding: 1rem;
-    background-color: #fff;
-    color: #333;
+    background-color: #ffffff;
+    color: #2c3e50;
     width: fit-content;
     margin: 1rem auto;
     border: 1px solid rgb(0 0 0 / 10%);
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 1.5rem;
-    color: #000;
+    font-size: 1.8rem;
+    color: #e74c3c;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.3rem;
+    color: #34495e;
+    font-weight: 500;
 }
 
 h1,
@@ -45,29 +48,39 @@ form p {
     padding: 1rem 1rem 0 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     border-radius: 10px;
-    background-color: #bed;
+    background: linear-gradient(135deg, #e8f4fd, #b3d9ff);
     text-align: center;
+    color: #2c3e50;
 }
 
 select {
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    width: 3rem;
+    padding: 0.6em;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    width: 4rem;
+    background-color: #ffffff;
+    color: #2c3e50;
+    font-size: 1rem;
 }
 
 button {
     display: block;
     margin: 1rem auto;
-    padding: 0.6em 1em;
+    padding: 0.8em 1.5em;
     border: none;
-    border-radius: 5px;
-    background-color: #0078d4;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #005fa3;
+    background: linear-gradient(135deg, #2980b9, #1f618d);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 table {
@@ -86,11 +99,14 @@ td {
 }
 
 th {
-    background-color: #000;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
-    font-weight: bold;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 tr:hover {
-    background-color: #bbb;
+    background-color: #ecf0f1;
+    transition: background-color 0.2s ease;
 }
