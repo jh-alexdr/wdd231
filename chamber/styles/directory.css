@@ -302,8 +302,7 @@ h6 {
     gap: 2rem;
     align-items: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, #22334a 0%, #3e92cc 100%);
-    color: white;
+    color: #22334a;
     border-radius: 15px;
     margin-bottom: 3rem;
     min-height: 400px;
