@@ -297,51 +297,61 @@ h6 {
 
 /* Home Page Styles */
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    padding: 3rem 2rem;
-    color: #22334a;
-    border-radius: 15px;
     margin-bottom: 3rem;
-    min-height: 400px;
 }
 
 .hero-image {
-    order: 2;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .hero-image img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-.hero-content {
-    order: 1;
-    text-align: left;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(34, 51, 74, 0.8) 0%, rgba(62, 146, 204, 0.8) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
 }
 
-.hero h1 {
+.hero-overlay h1 {
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
-.hero p {
+.hero-overlay p {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
     line-height: 1.6;
     font-weight: 300;
+    max-width: 600px;
 }
 
 .hero-actions {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn-primary,
@@ -567,26 +577,15 @@ h6 {
         gap: 1rem;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .hero-content {
-        order: 2;
-        text-align: center;
-    }
-
     .hero-image {
-        order: 1;
+        height: 300px;
     }
 
-    .hero h1 {
+    .hero-overlay h1 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .hero-overlay p {
         font-size: 1rem;
     }
 

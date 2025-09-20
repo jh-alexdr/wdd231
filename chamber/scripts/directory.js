@@ -54,9 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Filter to show only Gold (3) and Silver (2) members
         const featured = members.filter(member => member.membership === 2 || member.membership === 3);
 
-        // Shuffle and take first 2-3 members
+        // Shuffle and take first 2-3 members (randomly choose between 2 or 3)
         const shuffled = featured.sort(() => 0.5 - Math.random());
-        const selectedSpotlights = shuffled.slice(0, 3);
+        const numToShow = Math.floor(Math.random() * 2) + 2; // Randomly choose 2 or 3
+        const selectedSpotlights = shuffled.slice(0, numToShow);
 
         spotlightMembers.innerHTML = '';
 
