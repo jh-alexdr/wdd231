@@ -1,4 +1,5 @@
 // Directory page JS: fetches members and toggles grid/list view
+// Also handles featured members for home page
 
 document.addEventListener('DOMContentLoaded', () => {
     // Footer year and last modified
@@ -6,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lastModified').textContent = document.lastModified;
 
     const directory = document.getElementById('directory');
+    const featuredMembers = document.getElementById('featured-members');
     const gridBtn = document.getElementById('gridView');
     const listBtn = document.getElementById('listView');
 
@@ -19,17 +21,52 @@ document.addEventListener('DOMContentLoaded', () => {
     async function getMembers() {
         const response = await fetch('data/members.json');
         const members = await response.json();
-        displayMembers(members, 'grid');
-        // Toggle handlers
-        gridBtn.addEventListener('click', () => {
-            gridBtn.classList.add('active');
-            listBtn.classList.remove('active');
+
+        // Check if we're on the directory page or home page
+        if (directory) {
             displayMembers(members, 'grid');
-        });
-        listBtn.addEventListener('click', () => {
-            listBtn.classList.add('active');
-            gridBtn.classList.remove('active');
-            displayMembers(members, 'list');
+            // Toggle handlers for directory page
+            gridBtn.addEventListener('click', () => {
+                gridBtn.classList.add('active');
+                listBtn.classList.remove('active');
+                displayMembers(members, 'grid');
+            });
+            listBtn.addEventListener('click', () => {
+                listBtn.classList.add('active');
+                gridBtn.classList.remove('active');
+                displayMembers(members, 'list');
+            });
+        }
+
+        // Check if we're on the home page and display featured members
+        if (featuredMembers) {
+            displayFeaturedMembers(members);
+        }
+    }
+
+    function displayFeaturedMembers(members) {
+        // Filter to show only Gold (3) and Silver (2) members
+        const featured = members.filter(member => member.membership === 2 || member.membership === 3);
+
+        // Shuffle and take first 3-4 members
+        const shuffled = featured.sort(() => 0.5 - Math.random());
+        const selectedFeatured = shuffled.slice(0, 4);
+
+        featuredMembers.innerHTML = '';
+        featuredMembers.className = 'grid';
+
+        selectedFeatured.forEach(member => {
+            const card = document.createElement('div');
+            card.className = 'member-card';
+            card.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">${member.website}</a>
+                <p class="membership">Membership: ${membershipNames[member.membership] || "Member"}</p>
+            `;
+            featuredMembers.appendChild(card);
         });
     }
 
