@@ -5,22 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Jhalex Commerce - Your premier Chamber of Commerce. Connecting people with innovation. We make technology simple, reliable, and accessible so you can work smarter and live better.">
+        content="Jhalex Commerce Chamber - Empowering businesses in Quito, Ecuador. Join our thriving business community for networking, resources, and growth opportunities. Connect with local enterprises and drive economic development.">
     <meta name="author" content="Jhon A. Tobar">
+    <meta name="keywords"
+        content="chamber of commerce, Quito businesses, networking, economic development, business directory, Ecuador">
 
-    <title>Jhalex Commerce - Home</title>
+    <title>Jhalex Commerce Chamber - Empowering Business Growth in Quito</title>
     <link rel="icon" href="chamber.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Facebook Open Graph Meta Tags (local paths) -->
-    <meta property="og:title" content="Jhalex Commerce - Home">
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Jhalex Commerce Chamber - Empowering Business Growth">
     <meta property="og:description"
-        content="Jhalex Commerce - Your premier Chamber of Commerce. Connecting people with innovation. We make technology simple, reliable, and accessible so you can work smarter and live better.">
+        content="Join Quito's premier Chamber of Commerce. Connect with local businesses, access resources, and drive economic growth in our community.">
     <meta property="og:image" content="images/tlogo.svg">
-    <meta property="og:url" content="index.html">
+    <meta property="og:url" content="https://jh-alexdr.github.io/wdd231/chamber/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jhalex Commerce Chamber">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jhalex Commerce Chamber">
+    <meta name="twitter:description"
+        content="Empowering businesses in Quito, Ecuador through networking and resources.">
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -45,11 +54,17 @@
     </header>
     <main>
         <section class="hero">
-            <h1>Welcome to Jhalex Commerce</h1>
-            <p>Your premier Chamber of Commerce connecting businesses and fostering growth in our community.</p>
-            <div class="hero-actions">
-                <a href="directory.html" class="btn-primary">View Directory</a>
-                <a href="#contact" class="btn-secondary">Contact Us</a>
+            <div class="hero-image">
+                <img src="images/image1.png" alt="Quito business district skyline" loading="lazy">
+            </div>
+            <div class="hero-content">
+                <h1>Welcome to Jhalex Commerce Chamber</h1>
+                <p>Empowering businesses in Quito, Ecuador. Join our thriving community of entrepreneurs and established
+                    enterprises working together for economic growth and prosperity.</p>
+                <div class="hero-actions">
+                    <a href="#join" class="btn-primary">Join the Chamber</a>
+                    <a href="directory.html" class="btn-secondary">View Directory</a>
+                </div>
             </div>
         </section>
 
@@ -80,11 +95,33 @@
             </section>
         </div>
 
-        <section class="featured-businesses">
-            <h2>Featured Members</h2>
-            <div id="featured-members" class="grid">
-                <!-- Featured business members will be loaded here by JS -->
+        <section class="member-spotlights">
+            <h2>Member Spotlights</h2>
+            <p>Discover our featured Gold and Silver members who drive innovation and excellence in our community.</p>
+            <div id="spotlight-members" class="spotlight-grid">
+                <!-- Spotlight business members will be loaded here by JS -->
             </div>
+        </section>
+
+        <section class="join-chamber" id="join">
+            <h2>Join Jhalex Commerce Chamber</h2>
+            <p>Become part of Quito's premier business network. Access exclusive resources, networking opportunities,
+                and advocacy for your business growth.</p>
+            <div class="join-benefits">
+                <div class="benefit">
+                    <h3>🤝 Networking</h3>
+                    <p>Connect with local business leaders and potential partners</p>
+                </div>
+                <div class="benefit">
+                    <h3>📈 Growth</h3>
+                    <p>Access resources and tools to expand your business</p>
+                </div>
+                <div class="benefit">
+                    <h3>🎯 Advocacy</h3>
+                    <p>Strong voice in local economic and policy decisions</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn-primary">Contact Us to Join</a>
         </section>
 
         <section class="about" id="contact">

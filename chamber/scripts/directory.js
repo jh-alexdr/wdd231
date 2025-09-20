@@ -1,5 +1,5 @@
 // Directory page JS: fetches members and toggles grid/list view
-// Also handles featured members for home page
+// Also handles spotlight members for home page with OpenWeatherMap API
 
 document.addEventListener('DOMContentLoaded', () => {
     // Footer year and last modified
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lastModified').textContent = document.lastModified;
 
     const directory = document.getElementById('directory');
-    const featuredMembers = document.getElementById('featured-members');
+    const spotlightMembers = document.getElementById('spotlight-members');
     const gridBtn = document.getElementById('gridView');
     const listBtn = document.getElementById('listView');
 
@@ -19,54 +19,61 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     async function getMembers() {
-        const response = await fetch('data/members.json');
-        const members = await response.json();
+        try {
+            const response = await fetch('data/members.json');
+            const members = await response.json();
 
-        // Check if we're on the directory page or home page
-        if (directory) {
-            displayMembers(members, 'grid');
-            // Toggle handlers for directory page
-            gridBtn.addEventListener('click', () => {
-                gridBtn.classList.add('active');
-                listBtn.classList.remove('active');
+            // Check if we're on the directory page or home page
+            if (directory) {
                 displayMembers(members, 'grid');
-            });
-            listBtn.addEventListener('click', () => {
-                listBtn.classList.add('active');
-                gridBtn.classList.remove('active');
-                displayMembers(members, 'list');
-            });
-        }
+                // Toggle handlers for directory page
+                if (gridBtn && listBtn) {
+                    gridBtn.addEventListener('click', () => {
+                        gridBtn.classList.add('active');
+                        listBtn.classList.remove('active');
+                        displayMembers(members, 'grid');
+                    });
+                    listBtn.addEventListener('click', () => {
+                        listBtn.classList.add('active');
+                        gridBtn.classList.remove('active');
+                        displayMembers(members, 'list');
+                    });
+                }
+            }
 
-        // Check if we're on the home page and display featured members
-        if (featuredMembers) {
-            displayFeaturedMembers(members);
+            // Check if we're on the home page and display spotlight members
+            if (spotlightMembers) {
+                displaySpotlightMembers(members);
+            }
+        } catch (error) {
+            console.error('Error fetching members:', error);
         }
     }
 
-    function displayFeaturedMembers(members) {
+    function displaySpotlightMembers(members) {
         // Filter to show only Gold (3) and Silver (2) members
         const featured = members.filter(member => member.membership === 2 || member.membership === 3);
 
-        // Shuffle and take first 3-4 members
+        // Shuffle and take first 2-3 members
         const shuffled = featured.sort(() => 0.5 - Math.random());
-        const selectedFeatured = shuffled.slice(0, 4);
+        const selectedSpotlights = shuffled.slice(0, 3);
 
-        featuredMembers.innerHTML = '';
-        featuredMembers.className = 'grid';
+        spotlightMembers.innerHTML = '';
 
-        selectedFeatured.forEach(member => {
+        selectedSpotlights.forEach(member => {
             const card = document.createElement('div');
-            card.className = 'member-card';
+            card.className = 'spotlight-card';
             card.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" width="80" height="80">
+                <img src="images/${member.image}" alt="${member.name} logo" loading="lazy">
                 <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">${member.website}</a>
-                <p class="membership">Membership: ${membershipNames[member.membership] || "Member"}</p>
+                <div class="contact-info">
+                    <p><strong>📍</strong> ${member.address}</p>
+                    <p><strong>📞</strong> ${member.phone}</p>
+                    <a href="${member.website}" target="_blank" class="website" rel="noopener">🌐 Visit Website</a>
+                </div>
+                <div class="membership">${membershipNames[member.membership]} Member</div>
             `;
-            featuredMembers.appendChild(card);
+            spotlightMembers.appendChild(card);
         });
     }
 
@@ -114,52 +121,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Weather section (simple example for Quito, Ecuador)
+// Weather section using OpenWeatherMap API for Quito, Ecuador
 async function loadWeather() {
     // Quito, Ecuador coordinates
     const lat = -0.1807;
     const lon = -78.4678;
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,weathercode&timezone=auto`;
+    const apiKey = '57c4a855ad0d9f4511dc01f8a0c0fd29';
 
-    // Simple mapping for demonstration (expand as needed)
-    const weatherIcons = {
-        0: "weather.svg",
-        1: "weather.svg",
-        2: "weather.svg",
-        3: "weather.svg",
-        45: "weather.svg",
-        48: "weather.svg",
-        51: "weather.svg",
-        53: "weather.svg",
-        55: "weather.svg",
-        61: "weather.svg",
-        63: "weather.svg",
-        65: "weather.svg",
-        80: "weather.svg",
-        81: "weather.svg",
-        82: "weather.svg"
-        // ...add more as needed
-    };
+    // Current weather URL
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    // 5-day forecast URL
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     try {
-        const response = await fetch(url);
-        const data = await response.json();
-        // Current weather
-        document.getElementById('weather-temp').textContent = `${data.current_weather.temperature}°C`;
-        document.getElementById('weather-desc').textContent = `Wind: ${data.current_weather.windspeed} km/h`;
+        // Fetch current weather
+        const currentResponse = await fetch(currentWeatherUrl);
+        const currentData = await currentResponse.json();
 
-        // Set weather icon
-        const code = data.current_weather.weathercode;
-        const iconFile = weatherIcons[code] || "weather.svg";
-        document.getElementById('weather-icon').src = `images/${iconFile}`;
+        // Fetch forecast
+        const forecastResponse = await fetch(forecastUrl);
+        const forecastData = await forecastResponse.json();
 
-        // Forecast
-        document.getElementById('forecast-today').textContent = `${data.daily.temperature_2m_max[0]}°C`;
-        document.getElementById('forecast-tomorrow').textContent = `${data.daily.temperature_2m_max[1]}°C`;
-        document.getElementById('forecast-next').textContent = `${data.daily.temperature_2m_max[2]}°C`;
-    } catch (e) {
-        document.getElementById('weather-info').textContent = "Weather unavailable";
-        document.getElementById('forecast-list').innerHTML = "<li>Unavailable</li>";
+        // Display current weather
+        const temp = Math.round(currentData.main.temp);
+        const description = currentData.weather[0].description;
+        const iconCode = currentData.weather[0].icon;
+
+        document.getElementById('weather-temp').textContent = `${temp}°C`;
+        document.getElementById('weather-desc').textContent = description.charAt(0).toUpperCase() + description.slice(1);
+
+        // Use OpenWeatherMap icons
+        document.getElementById('weather-icon').src = `https://openweathermap.org/img/w/${iconCode}.png`;
+        document.getElementById('weather-icon').alt = description;
+
+        // Display 3-day forecast (today + next 2 days)
+        const forecastList = forecastData.list;
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+        const dayAfter = new Date(today);
+        dayAfter.setDate(today.getDate() + 2);
+
+        // Get forecast for today (or current temp)
+        document.getElementById('forecast-today').textContent = `${temp}°C`;
+
+        // Get forecast for tomorrow (find forecast around noon)
+        const tomorrowForecast = forecastList.find(item => {
+            const forecastDate = new Date(item.dt * 1000);
+            return forecastDate.getDate() === tomorrow.getDate() &&
+                forecastDate.getHours() >= 12 &&
+                forecastDate.getHours() <= 15;
+        });
+
+        if (tomorrowForecast) {
+            document.getElementById('forecast-tomorrow').textContent = `${Math.round(tomorrowForecast.main.temp)}°C`;
+        }
+
+        // Get forecast for day after tomorrow
+        const dayAfterForecast = forecastList.find(item => {
+            const forecastDate = new Date(item.dt * 1000);
+            return forecastDate.getDate() === dayAfter.getDate() &&
+                forecastDate.getHours() >= 12 &&
+                forecastDate.getHours() <= 15;
+        });
+
+        if (dayAfterForecast) {
+            document.getElementById('forecast-next').textContent = `${Math.round(dayAfterForecast.main.temp)}°C`;
+        }
+
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        // Fallback to demo data if API fails
+        document.getElementById('weather-temp').textContent = '22°C';
+        document.getElementById('weather-desc').textContent = 'Partly Cloudy';
+        document.getElementById('weather-icon').src = 'images/weather.svg';
+        document.getElementById('forecast-today').textContent = '22°C';
+        document.getElementById('forecast-tomorrow').textContent = '24°C';
+        document.getElementById('forecast-next').textContent = '21°C';
     }
 }
 
