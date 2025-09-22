@@ -295,6 +295,16 @@ h6 {
     font-weight: bold;
 }
 
+/* Main H1 styling */
+main>h1 {
+    font-size: 2.5rem;
+    color: #22334a;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
 /* Home Page Styles */
 .hero {
     margin-bottom: 3rem;
@@ -332,7 +342,7 @@ h6 {
     border-radius: 15px;
 }
 
-.hero-overlay h1 {
+.hero-overlay h2 {
     font-size: 2.8rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -577,11 +587,16 @@ h6 {
         gap: 1rem;
     }
 
+    main>h1 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
     .hero-image {
         height: 300px;
     }
 
-    .hero-overlay h1 {
+    .hero-overlay h2 {
         font-size: 2rem;
     }
 
