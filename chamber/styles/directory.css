@@ -13,6 +13,12 @@ footer {
     text-align: center;
 }
 
+.site-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
