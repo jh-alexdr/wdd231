@@ -108,12 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalCredits = document.getElementById('totalCredits');
     const courseDetails = document.getElementById('courseDialog');
     const dialogContent = document.getElementById('dialogContent');
+    const closeDialog = document.getElementById('closeDialog');
 
     // Function to display course details in modal
     function displayCourseDetails(course) {
-        courseDetails.innerHTML = '';
-        courseDetails.innerHTML = `
-            <button id="closeModal">❌</button>
+        dialogContent.innerHTML = `
             <h2>${course.subject} ${course.number}</h2>
             <h3>${course.title}</h3>
             <p><strong>Credits</strong>: ${course.credits}</p>
@@ -122,12 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
         `;
         courseDetails.showModal();
-
-        const closeModal = document.getElementById('closeModal');
-        closeModal.addEventListener("click", () => {
-            courseDetails.close();
-        });
     }
+
+    // Event listener for close button
+    closeDialog.addEventListener('click', () => {
+        courseDetails.close();
+    });
 
     // Event listener to close modal when clicking outside
     courseDetails.addEventListener('click', (e) => {
