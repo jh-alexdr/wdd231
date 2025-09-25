@@ -35,20 +35,106 @@ function displayCourses() {
 // Call the displayCourses function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const courses = [
-        { code: 'CSE 110', type: 'CSE', credits: 2, title: 'Programming Building Blocks', desc: 'Intro to programming.' },
-        { code: 'WDD 130', type: 'WDD', credits: 2, title: 'Web Fundamentals', desc: 'Intro to web development.' },
-        { code: 'CSE 111', type: 'CSE', credits: 2, title: 'Programming with Functions', desc: 'Intermediate programming.' },
-        { code: 'CSE 210', type: 'CSE', credits: 2, title: 'Programming with Classes', desc: 'OOP with classes.' },
-        { code: 'WDD 131', type: 'WDD', credits: 2, title: 'Dynamic Web Fundamentals', desc: 'Dynamic web content.' },
-        { code: 'WDD 231', type: 'WDD', credits: 2, title: 'Web Frontend Development I', desc: 'Frontend web dev.' }
+        {
+            subject: 'CSE',
+            number: '110',
+            title: 'Programming Building Blocks',
+            credits: 2,
+            certificate: 'Web and Computer Programming',
+            description: 'This course will introduce students to programming concepts and help them develop skills to solve problems using a programming language.',
+            technology: ['Python', 'Thinking Logically', 'Problem Solving'],
+            type: 'CSE',
+            code: 'CSE 110'
+        },
+        {
+            subject: 'WDD',
+            number: '130',
+            title: 'Web Fundamentals',
+            credits: 2,
+            certificate: 'Web and Computer Programming',
+            description: 'This course introduces students to the World Wide Web and to careers in web site design and development.',
+            technology: ['HTML', 'CSS', 'JavaScript', 'Web Design'],
+            type: 'WDD',
+            code: 'WDD 130'
+        },
+        {
+            subject: 'CSE',
+            number: '111',
+            title: 'Programming with Functions',
+            credits: 2,
+            certificate: 'Web and Computer Programming',
+            description: 'Students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others.',
+            technology: ['Python', 'Functions', 'Testing', 'Debugging'],
+            type: 'CSE',
+            code: 'CSE 111'
+        },
+        {
+            subject: 'CSE',
+            number: '210',
+            title: 'Programming with Classes',
+            credits: 2,
+            certificate: 'Web and Computer Programming',
+            description: 'Students become more organized, efficient, and powerful computer programmers by learning to write and call methods of classes.',
+            technology: ['C#', 'Object Oriented Programming', 'Classes', 'Encapsulation'],
+            type: 'CSE',
+            code: 'CSE 210'
+        },
+        {
+            subject: 'WDD',
+            number: '131',
+            title: 'Dynamic Web Fundamentals',
+            credits: 2,
+            certificate: 'Web and Computer Programming',
+            description: 'Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+            technology: ['HTML', 'CSS', 'JavaScript', 'DOM Manipulation', 'Forms'],
+            type: 'WDD',
+            code: 'WDD 131'
+        },
+        {
+            subject: 'WDD',
+            number: '231',
+            title: 'Web Frontend Development I',
+            credits: 2,
+            certificate: 'Web and Computer Programming',
+            description: 'Students will learn to build multipage websites and will be introduced to CSS Grid, Flexbox and responsive design principles.',
+            technology: ['HTML', 'CSS', 'JavaScript', 'Grid', 'Flexbox', 'Responsive Design'],
+            type: 'WDD',
+            code: 'WDD 231'
+        }
     ];
 
     const boxButton = document.querySelector('.boxButton');
     const boxCertificate = document.querySelector('.boxCertificate');
     const totalCredits = document.getElementById('totalCredits');
-    const dialog = document.getElementById('courseDialog');
+    const courseDetails = document.getElementById('courseDialog');
     const dialogContent = document.getElementById('dialogContent');
-    const closeDialog = document.getElementById('closeDialog');
+
+    // Function to display course details in modal
+    function displayCourseDetails(course) {
+        courseDetails.innerHTML = '';
+        courseDetails.innerHTML = `
+            <button id="closeModal">❌</button>
+            <h2>${course.subject} ${course.number}</h2>
+            <h3>${course.title}</h3>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        `;
+        courseDetails.showModal();
+
+        const closeModal = document.getElementById('closeModal');
+        closeModal.addEventListener("click", () => {
+            courseDetails.close();
+        });
+    }
+
+    // Event listener to close modal when clicking outside
+    courseDetails.addEventListener('click', (e) => {
+        if (e.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
 
     // Botones de filtro
     boxButton.innerHTML = `
@@ -67,6 +153,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>${c.code}</h3>
             </div>`
         ).join('');
+
+        // Add click event listener to each course card
+        const courseCards = boxCertificate.querySelectorAll('.courseCard');
+        courseCards.forEach(courseDiv => {
+            courseDiv.addEventListener('click', () => {
+                const code = courseDiv.getAttribute('data-code');
+                const course = courses.find(c => c.code === code);
+                if (course) {
+                    displayCourseDetails(course);
+                }
+            });
+        });
+
         // Créditos
         const credits = filtered.reduce((sum, c) => sum + c.credits, 0);
         totalCredits.textContent = `The total credits for course listed above is ${credits}`;
@@ -79,28 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.classList.add('active');
             renderCourses(e.target.dataset.filter);
         }
-    });
-
-    // Mostrar dialog al hacer click en un curso
-    boxCertificate.addEventListener('click', e => {
-        const card = e.target.closest('.courseCard');
-        if (card) {
-            const code = card.getAttribute('data-code');
-            const course = courses.find(c => c.code === code);
-            if (course) {
-                dialogContent.innerHTML = `
-                    <h3>${course.code} - ${course.title}</h3>
-                    <p><strong>Credits:</strong> ${course.credits}</p>
-                    <p>${course.desc}</p>
-                `;
-                dialog.showModal();
-            }
-        }
-    });
-
-    // Cerrar dialog
-    closeDialog.addEventListener('click', () => {
-        dialog.close();
     });
 
     // Inicial
