@@ -110,8 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialogContent = document.getElementById('dialogContent');
     const closeDialog = document.getElementById('closeDialog');
 
+
+
     // Function to display course details in modal
     function displayCourseDetails(course) {
+        if (!dialogContent || !courseDetails) {
+            console.error('Dialog elements not found!');
+            return;
+        }
+
         dialogContent.innerHTML = `
             <h2>${course.subject} ${course.number}</h2>
             <h3>${course.title}</h3>
@@ -120,13 +127,25 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${course.description}</p>
             <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
         `;
-        courseDetails.showModal();
+
+        if (typeof courseDetails.showModal === 'function') {
+            courseDetails.showModal();
+        } else {
+            // Fallback for older browsers
+            courseDetails.setAttribute('open', '');
+        }
     }
 
     // Event listener for close button
-    closeDialog.addEventListener('click', () => {
-        courseDetails.close();
-    });
+    if (closeDialog) {
+        closeDialog.addEventListener('click', () => {
+            if (typeof courseDetails.close === 'function') {
+                courseDetails.close();
+            } else {
+                courseDetails.removeAttribute('open');
+            }
+        });
+    }
 
     // Event listener to close modal when clicking outside
     courseDetails.addEventListener('click', (e) => {
@@ -155,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add click event listener to each course card
         const courseCards = boxCertificate.querySelectorAll('.courseCard');
+
         courseCards.forEach(courseDiv => {
             courseDiv.addEventListener('click', () => {
                 const code = courseDiv.getAttribute('data-code');

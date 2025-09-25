@@ -336,8 +336,3 @@ footer {
     color: #888;
     margin-top: 0.5rem;
 }
-
-/* Hide dialogs by default */
-dialog {
-    display: none;
-}
