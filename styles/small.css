@@ -254,24 +254,23 @@ h1 {
 
 /* Dialog styles */
 dialog {
-    border: none;
-    border-radius: 12px;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    box-shadow: 0 4px 32px #0004;
-    max-width: 350px;
-    width: 90vw;
-    font-family: var(--font-main);
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
     position: relative;
 }
 
-#closeDialog {
+dialog button {
     position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--color-section-header);
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    background-color: #fff;
     cursor: pointer;
 }
 

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-   
+
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-    
+
 </head>
 
 <body>
@@ -76,12 +76,14 @@
             </div>
             <p id="totalCredits">The total credits for course listed above is 6</p>
         </section>
+
+        <!-- Dialog for course details -->
+        <dialog id="courseDialog">
+            <button id="closeDialog" aria-label="Close">&times;</button>
+            <div id="dialogContent"></div>
+        </dialog>
+        
     </main>
-    <!-- Dialog for course details -->
-    <dialog id="courseDialog">
-        <button id="closeDialog" aria-label="Close">&times;</button>
-        <div id="dialogContent"></div>
-    </dialog>
     <footer>
         <div class="social-links">
             <a href="https://jh-alexdr.github.io/wdd231/" target="_blank" aria-label="GitHub">

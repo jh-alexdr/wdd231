@@ -138,6 +138,11 @@ footer {
     }
 }
 
+/* Dialog backdrop styling */
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
 @media (min-width: 768px) {
     nav {
         justify-content: flex-end;
@@ -150,5 +155,11 @@ footer {
     main {
         max-width: 1200px;
         margin: auto;
+    }
+
+    /* Dialog responsive adjustments */
+    dialog {
+        max-width: 450px;
+        padding: 2.5rem 2rem 2rem 2rem;
     }
 }
