@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Jhalex Commerce</title>
+    <meta name="description" content="Thank you for your membership application to our Chamber of Commerce">
+    <meta name="author" content="Jhon A. Tobar">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/image9.jpg" alt="Jhalex Commerce Logo" class="logo">
+            <h1>Jhalex Commerce</h1>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="thank-you-container">
+            <div class="thank-you-header">
+                <h2>Thank You for Your Application!</h2>
+                <p class="thank-you-message">We appreciate your interest in joining our Chamber of Commerce. Your
+                    application has been successfully submitted and will be reviewed by our membership team.</p>
+            </div>
+
+            <div class="application-summary">
+                <h3>Application Summary</h3>
+                <div class="summary-content">
+                    <div class="summary-section">
+                        <h4>Required Information Submitted</h4>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Full Name:</span>
+                                <span class="info-value" id="applicant-name">Loading...</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label">Email Address:</span>
+                                <span class="info-value" id="email-display">Loading...</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label">Mobile Phone:</span>
+                                <span class="info-value" id="phone-display">Loading...</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label">Business/Organization:</span>
+                                <span class="info-value" id="org-name-display">Loading...</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-label">Application Submitted:</span>
+                                <span class="info-value" id="timestamp-display">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <div class="steps-list">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Review Process</h4>
+                            <p>Our membership committee will review your application within 3-5 business days.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Welcome Package</h4>
+                            <p>Upon approval, you'll receive a welcome package with membership benefits and resources.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Get Connected</h4>
+                            <p>Start networking with fellow members and accessing exclusive chamber events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h3>Questions?</h3>
+                <p>If you have any questions about your application or our membership process, please don't hesitate to
+                    contact us:</p>
+                <div class="contact-details">
+                    <p>📞 <strong>Call us:</strong> (593) 992957913</p>
+                    <p>✉️ <strong>Email us:</strong> membership@jhalexcommerce.org</p>
+                    <p>🏢 <strong>Visit us:</strong> Ayapamba Street, Quito, Ecuador</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+                <a href="discover.html" class="btn btn-secondary">Discover Our Community</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>📍 Ayapamba Street, Quito, Ecuador</p>
+                <p>📞 (593) 992957913</p>
+                <p>✉️ info@jhalexcommerce.org</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Jhalex Commerce</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/chamber.js"></script>
+    <script src="scripts/thankyou.js"></script>
+</body>
+
+</html>

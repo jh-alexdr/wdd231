@@ -1,0 +1,1132 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header styles */
+header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #3b82f6;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h2 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Join container layout */
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* Form styles */
+.join-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-weight: 600;
+    color: #1e3a8a;
+    padding: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input[type="submit"] {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
+}
+
+/* .learn-more-btn styling  */
+.learn-more-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.025em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: none;
+}
+
+.learn-more-btn:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 2px;
+}
+
+/* Form validation styles */
+.error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Membership cards container */
+.membership-cards {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-cards h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Updated membership card styles with formal, professional colors */
+
+/* Non-Profit Membership - Professional Blue/Gray */
+.membership-card:nth-child(2) {
+    animation-delay: 0.1s;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-color: #475569;
+    box-shadow: 0 4px 15px rgba(71, 85, 105, 0.15);
+}
+
+.membership-card:nth-child(2) h4 {
+    color: #1e293b;
+}
+
+.membership-card:nth-child(2) .learn-more-btn {
+    background-color: #475569;
+    border: 2px solid #334155;
+    color: white;
+}
+
+.membership-card:nth-child(2) .learn-more-btn:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(71, 85, 105, 0.3);
+}
+
+/* Bronze Membership - Professional Brown/Tan */
+.membership-card:nth-child(3) {
+    animation-delay: 0.2s;
+    background: linear-gradient(135deg, #fefbf3 0%, #f3e8d2 100%);
+    border-color: #a16207;
+    box-shadow: 0 4px 15px rgba(161, 98, 7, 0.15);
+}
+
+.membership-card:nth-child(3) h4 {
+    color: #713f12;
+}
+
+.membership-card:nth-child(3) .learn-more-btn {
+    background-color: #a16207;
+    border: 2px solid #854d0e;
+    color: white;
+}
+
+.membership-card:nth-child(3) .learn-more-btn:hover {
+    background-color: #854d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(161, 98, 7, 0.3);
+}
+
+/* Silver Membership - Professional Silver/Platinum */
+.membership-card:nth-child(4) {
+    animation-delay: 0.3s;
+    background: linear-gradient(135deg, #f8fafc 0%, #e1e5e9 100%);
+    border-color: #6b7280;
+    box-shadow: 0 4px 15px rgba(107, 114, 128, 0.2);
+}
+
+.membership-card:nth-child(4) h4 {
+    color: #374151;
+}
+
+.membership-card:nth-child(4) .learn-more-btn {
+    background-color: #6b7280;
+    border: 2px solid #4b5563;
+    color: white;
+}
+
+.membership-card:nth-child(4) .learn-more-btn:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+}
+
+/* Gold Membership - Professional Gold/Champagne */
+.membership-card:nth-child(5) {
+    animation-delay: 0.4s;
+    background: linear-gradient(135deg, #fffdf7 0%, #f7f3e9 100%);
+    border-color: #b45309;
+    box-shadow: 0 4px 15px rgba(180, 83, 9, 0.2);
+}
+
+.membership-card:nth-child(5) h4 {
+    color: #92400e;
+}
+
+.membership-card:nth-child(5) .learn-more-btn {
+    background-color: #b45309;
+    border: 2px solid #9a3412;
+    color: white;
+    font-weight: 600;
+}
+
+.membership-card:nth-child(5) .learn-more-btn:hover {
+    background-color: #9a3412;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.3);
+}
+
+/* Membership card styles with new animation */
+.membership-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    /* Added for 3D effect */
+
+    /* Wave animation properties */
+    opacity: 0;
+    animation: wave 0.8s ease-out forwards;
+}
+
+/* Stagger the animation for each card */
+.membership-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.membership-card:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+/* New keyframe animation */
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) rotateX(-90deg);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(15px) rotateX(-45deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+/* Enhanced professional styling */
+.membership-card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: none;
+    letter-spacing: 0.025em;
+}
+
+/* Refined hover effects */
+.membership-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Professional metallic shine effect for premium memberships */
+.membership-card:nth-child(4)::before,
+.membership-card:nth-child(5)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.8s ease;
+}
+
+.membership-card:nth-child(4):hover::before,
+.membership-card:nth-child(5):hover::before {
+    left: 100%;
+}
+
+/* Update general membership card heading color */
+.membership-card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe animations */
+@keyframes slideInFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+.close {
+    color: #6b7280;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #374151;
+}
+
+.modal-content h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.modal-content ul {
+    margin: 1rem 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.modal-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+}
+
+.modal-content p {
+    font-weight: 600;
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+    color: #60a5fa;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+}
+
+.footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* Thank you page styles */
+.thank-you-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.thank-you-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.thank-you-header h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 0.8s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.thank-you-message {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    color: #f8fafc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternative option - if you prefer a different color scheme */
+/* Uncomment this section if you want to use it instead */
+/*
+.thank-you-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(31, 41, 55, 0.3);
+}
+
+.thank-you-header h2 {
+    color: #f9fafb;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.thank-you-message {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    color: #e5e7eb;
+}
+*/
+
+.application-summary {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px solid #3b82f6;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeInLeft 0.8s ease-out 0.4s both;
+}
+
+.application-summary h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 0.5rem;
+}
+
+.summary-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.summary-section h4 {
+    color: #374151;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.summary-section p {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.summary-section p:last-child {
+    border-bottom: none;
+}
+
+.next-steps {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeInRight 0.8s ease-out 0.6s both;
+}
+
+.next-steps h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.step-number {
+    background: #3b82f6;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    color: #6b7280;
+    margin: 0;
+}
+
+.contact-section {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.contact-section h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-top: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-out 1s both;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes slideInFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) rotateX(-90deg);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(15px) rotateX(-45deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3b82f6;
+        gap: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    .join-form,
+    .membership-cards {
+        padding: 1.5rem;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .thank-you-header h2 {
+        font-size: 2rem;
+    }
+
+    .thank-you-message {
+        font-size: 1.1rem;
+    }
+
+    .summary-content {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Accessibility - Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .modal-content {
+        animation: none;
+    }
+
+    .thank-you-header h2,
+    .thank-you-message,
+    .application-summary,
+    .next-steps,
+    .contact-section,
+    .action-buttons {
+        animation: none;
+    }
+
+    * {
+        transition: none !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* Add to your base.css file - Thank you page form display styles */
+.application-summary {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px solid #3b82f6;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeInLeft 0.8s ease-out 0.4s both;
+}
+
+.application-summary h3 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 0.5rem;
+}
+
+.summary-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.summary-section h4 {
+    color: #374151;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-label {
+    font-weight: 600;
+    color: #374151;
+    min-width: 140px;
+}
+
+.info-value {
+    color: #1e3a8a;
+    font-weight: 500;
+    text-align: right;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+/* Highlight the timestamp */
+.info-item:last-child {
+    border-left-color: #10b981;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.info-item:last-child .info-label {
+    color: #065f46;
+}
+
+.info-item:last-child .info-value {
+    color: #059669;
+}
+
+/* Mobile responsive for form display */
+@media (max-width: 768px) {
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .info-label {
+        min-width: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-value {
+        text-align: left;
+        margin-left: 0;
+        font-size: 0.95rem;
+    }
+}
+
+/* Animation for individual info items */
+.info-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInItem 0.5s ease-out forwards;
+}
+
+.info-item:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.info-item:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.info-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.info-item:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.info-item:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+@keyframes slideInItem {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

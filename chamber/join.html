@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Jhalex Commerce</title>
+    <meta name="description" content="Join our Chamber of Commerce and become part of a thriving business community">
+    <meta name="author" content="Jhon A. Tobar">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/image9.jpg" alt="Jhalex Commerce Logo" class="logo">
+            <h1>Jhalex Commerce</h1>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Join Our Chamber</h2>
+        <p>Become a member of our Chamber of Commerce and join a community of thriving businesses.</p>
+
+        <div class="join-container">
+            <form method="get" action="thankyou.html" class="join-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="first-name" title="Enter your first name">
+                        First Name *
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name"
+                            autocomplete="given-name" required>
+                    </label>
+
+                    <label for="last-name" title="Enter your last name">
+                        Last Name *
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name"
+                            autocomplete="family-name" required>
+                    </label>
+
+                    <label for="org-title"
+                        title="Enter your organizational title (minimum 7 characters, letters, hyphens, and spaces only)">
+                        Organizational Title
+                        <input type="text" id="org-title" name="org-title"
+                            title="Enter your organizational title (minimum 7 characters, letters, hyphens, and spaces only)"
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label for="email" title="Enter your email address">
+                        Email Address *
+                        <input type="email" id="email" name="email" title="Enter your email address"
+                            autocomplete="email" placeholder="example@email.com" required>
+                    </label>
+
+                    <label for="phone" title="Enter your mobile phone number">
+                        Mobile Phone Number *
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Organization Information</legend>
+
+                    <label for="org-name" title="Enter your business or organization name">
+                        Business/Organization Name *
+                        <input type="text" id="org-name" name="org-name"
+                            title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label for="membership-level" title="Select your membership level">
+                        Membership Level
+                        <select id="membership-level" name="membership-level" title="Select your membership level">
+                            <option value="">Select a Membership Level</option>
+                            <option value="np">NP Membership (Non-profit organizations - No fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="org-description" title="Describe your business or organization">
+                        Business/Organization Description
+                        <textarea id="org-description" name="org-description"
+                            title="Describe your business or organization" rows="5"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Submit Application">
+            </form>
+
+            <div class="membership-cards">
+                <h3>Membership Levels</h3>
+
+                <div class="membership-card">
+                    <h4>Non Profit Membership Level</h4>
+                    <button type="button" class="learn-more-btn" data-modal="np-modal">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <h4>Bronze Membership Level</h4>
+                    <button type="button" class="learn-more-btn" data-modal="bronze-modal">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <h4>Silver Membership Level</h4>
+                    <button type="button" class="learn-more-btn" data-modal="silver-modal">Learn More</button>
+                </div>
+
+                <div class="membership-card">
+                    <h4>Gold Membership Level</h4>
+                    <button type="button" class="learn-more-btn" data-modal="gold-modal">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Non Profit Membership</h3>
+                <ul>
+                    <li>✓ Free membership for qualified non-profit organizations</li>
+                    <li>✓ Basic directory listing</li>
+                    <li>✓ Access to networking events</li>
+                    <li>✓ Monthly newsletter</li>
+                    <li>✓ Community event participation</li>
+                </ul>
+                <p><strong>Cost: FREE</strong></p>
+            </div>
+        </div>
+
+        <div id="bronze-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Bronze Membership</h3>
+                <ul>
+                    <li>✓ All Non-Profit benefits</li>
+                    <li>✓ Enhanced directory listing with logo</li>
+                    <li>✓ Priority event registration</li>
+                    <li>✓ Quarterly business workshops</li>
+                    <li>✓ Social media promotion</li>
+                </ul>
+                <p><strong>Cost: $200/year</strong></p>
+            </div>
+        </div>
+
+        <div id="silver-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Silver Membership</h3>
+                <ul>
+                    <li>✓ All Bronze benefits</li>
+                    <li>✓ Featured directory listing</li>
+                    <li>✓ Monthly ribbon cutting ceremonies</li>
+                    <li>✓ Business referral program</li>
+                    <li>✓ Advertising opportunities</li>
+                    <li>✓ Government liaison services</li>
+                </ul>
+                <p><strong>Cost: $400/year</strong></p>
+            </div>
+        </div>
+
+        <div id="gold-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Gold Membership</h3>
+                <ul>
+                    <li>✓ All Silver benefits</li>
+                    <li>✓ Premium directory placement</li>
+                    <li>✓ Executive networking events</li>
+                    <li>✓ Annual awards consideration</li>
+                    <li>✓ VIP customer service</li>
+                    <li>✓ Board meeting participation rights</li>
+                    <li>✓ Custom promotional opportunities</li>
+                </ul>
+                <p><strong>Cost: $1000/year</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>📍 Ayapamba Street, Quito, Ecuador</p>
+                <p>📞 (593) 992957913</p>
+                <p>✉️ info@jhalexcommerce.org</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Jhalex Commerce</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/chamber.js"></script>
+</body>
+
+</html>
