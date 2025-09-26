@@ -34,9 +34,10 @@ header {
     border-radius: 50%;
 }
 
-header h1 {
+.site-name {
     font-size: 1.8rem;
     font-weight: 600;
+    color: white;
 }
 
 /* Navigation styles */
