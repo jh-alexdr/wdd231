@@ -1,0 +1,115 @@
+/* 
+This is a CSS file used to reset default browser styles to ensure consistency across different browsers.
+*/
+
+html {
+    line-height: 1.15; /* Improve readability */
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+}
+
+h1 {
+    font-size: 2em; /* Set a base size for h1 */
+    margin: 0.67em 0; /* Adjust margin for h1 */
+}
+
+hr {
+    box-sizing: content-box; /* Ensure proper sizing */
+    height: 0; /* Remove default height */
+    overflow: visible; /* Ensure visibility */
+}
+
+pre {
+    font-family: monospace, monospace; /* Set font for preformatted text */
+    font-size: 1em; /* Set base size for preformatted text */
+}
+
+a {
+    background-color: transparent; /* Remove default background */
+}
+
+abbr[title] {
+    text-decoration: underline; /* Underline abbreviations */
+    text-decoration: underline dotted; /* Dotted underline for titles */
+}
+
+b,
+strong {
+    font-weight: bolder; /* Set bolder font weight */
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; /* Set font for code elements */
+    font-size: 1em; /* Set base size for code elements */
+}
+
+small {
+    font-size: 80%; /* Set smaller font size */
+}
+
+sub {
+    font-size: 75%; /* Set subscript font size */
+    line-height: 0; /* Adjust line height for subscript */
+}
+
+sup {
+    font-size: 75%; /* Set superscript font size */
+    line-height: 0; /* Adjust line height for superscript */
+}
+
+img {
+    border-style: none; /* Remove default border */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* Inherit font family */
+    font-size: inherit; /* Inherit font size */
+    line-height: inherit; /* Inherit line height */
+}
+
+button,
+input {
+    overflow: visible; /* Ensure visibility */
+}
+
+button,
+select {
+    text-transform: none; /* Prevent text transformation */
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button; /* Set button appearance */
+}
+
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none; /* Remove default border */
+    padding: 0; /* Remove default padding */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* Ensure proper sizing */
+    padding: 0; /* Remove default padding */
+}
+
+textarea {
+    overflow: auto; /* Allow overflow */
+}
+
+[hidden] {
+    display: none; /* Hide elements */
+}
