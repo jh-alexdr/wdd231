@@ -5,7 +5,9 @@ body {
 }
 
 header {
-    background-color: #f8f9fa;
+    background: linear-gradient(90deg, #1976d2 60%, #2b9348 100%);
+    /* Blue to green */
+    color: #fff3b0;
     padding: 20px;
     text-align: center;
 }
@@ -17,7 +19,38 @@ nav {
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #007bff;
+    color: #1976d2;
+    /* Blue for nav links */
+}
+
+nav a:hover {
+    background: #55a630;
+    color: #fff3b0;
+}
+
+h1,
+h2,
+h3 {
+    color: #1976d2;
+    /* Blue for headings */
+}
+
+.button,
+.cta {
+    background: linear-gradient(90deg, #1976d2 60%, #2b9348 100%);
+    color: #fff3b0;
+    border: none;
+    border-radius: 30px;
+    padding: 0.7em 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover,
+.cta:hover {
+    background: #1976d2;
+    color: #fff3b0;
 }
 
 main {
@@ -27,7 +60,8 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #f8f9fa;
+    background: #1976d2;
+    color: #fff3b0;
     position: relative;
     bottom: 0;
     width: 100%;

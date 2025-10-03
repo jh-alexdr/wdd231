@@ -3,12 +3,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
+    background: linear-gradient(90deg, #1976d2 60%, #2b9348 100%);
+    /* Blue to green */
+    color: #fff3b0;
     padding: 20px 0;
     text-align: center;
 }
@@ -18,32 +19,55 @@ nav {
 }
 
 nav a {
-    color: #ffffff;
+    color: #1976d2;
+    /* Blue for nav links */
     text-decoration: none;
     padding: 10px 15px;
 }
 
 nav a:hover {
-    background: #e8491d;
+    background: #55a630;
+    color: #fff3b0;
 }
 
 main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background: #ffffff;
+    background: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
-    color: #35424a;
+h1,
+h2,
+h3 {
+    color: #1976d2;
+    /* Blue for headings */
+}
+
+.button,
+.cta {
+    background: linear-gradient(90deg, #1976d2 60%, #2b9348 100%);
+    color: #fff3b0;
+    border: none;
+    border-radius: 30px;
+    padding: 0.7em 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover,
+.cta:hover {
+    background: #1976d2;
+    color: #fff3b0;
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #35424a;
-    color: #ffffff;
+    background: #1976d2;
+    color: #fff3b0;
     position: relative;
     bottom: 0;
     width: 100%;

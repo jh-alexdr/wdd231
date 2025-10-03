@@ -3,15 +3,23 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9;
+    color: #2b9348;
 }
 
 header {
-    background: #4CAF50;
-    color: #fff;
+    background: linear-gradient(90deg, #1976d2 60%, #2b9348 100%);
+    /* Blue to green */
+    color: #fff3b0;
     padding: 10px 0;
     text-align: center;
+}
+
+header h1,
+header h2,
+header h3 {
+    color: #fff !important;
+    text-shadow: 0 2px 8px rgba(25, 118, 210, 0.2), 0 1px 0 #2b9348;
 }
 
 nav {
@@ -19,13 +27,15 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #1976d2;
+    /* Blue for nav links */
     text-decoration: none;
     padding: 10px 15px;
 }
 
 nav a:hover {
-    background: #45a049;
+    background: #55a630;
+    color: #fff3b0;
 }
 
 .container {
@@ -34,11 +44,36 @@ nav a:hover {
     overflow: hidden;
 }
 
+h1,
+h2,
+h3 {
+    color: #1976d2;
+    /* Blue for headings */
+}
+
+.button,
+.cta {
+    background: linear-gradient(90deg, #1976d2 60%, #2b9348 100%);
+    color: #fff3b0;
+    border: none;
+    border-radius: 30px;
+    padding: 0.7em 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover,
+.cta:hover {
+    background: #1976d2;
+    color: #fff3b0;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #333;
-    color: #fff;
+    background: #1976d2;
+    color: #fff3b0;
     position: relative;
     bottom: 0;
     width: 100%;
