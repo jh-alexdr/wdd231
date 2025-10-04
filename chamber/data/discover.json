@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Mitad del Mundo",
+        "address": "Av. Manuel Córdova Galarza, Quito, Ecuador",
+        "description": "A monument and museum marking the equator line, offering cultural exhibits and panoramic views.",
+        "image": "images/mitad-del-mundo.webp"
+    },
+    {
+        "name": "Basilica del Voto Nacional",
+        "address": "Carchi 122 y Venezuela, Quito, Ecuador",
+        "description": "A stunning neo-Gothic church with towers you can climb for breathtaking city views.",
+        "image": "images/basilica-voto-nacional.webp"
+    },
+    {
+        "name": "TelefériQo Quito",
+        "address": "Fulgencio Araujo, Quito, Ecuador",
+        "description": "A cable car ride up the Pichincha Volcano, providing spectacular vistas and hiking trails.",
+        "image": "images/teleferiqo.webp"
+    },
+    {
+        "name": "La Ronda",
+        "address": "La Ronda, Centro Histórico, Quito, Ecuador",
+        "description": "A historic street filled with artisan shops, cafes, and vibrant nightlife.",
+        "image": "images/la-ronda.webp"
+    },
+    {
+        "name": "Parque La Carolina",
+        "address": "Av. de los Shyris, Quito, Ecuador",
+        "description": "A large urban park with gardens, sports facilities, and a botanical garden.",
+        "image": "images/parque-la-carolina.webp"
+    },
+    {
+        "name": "Museo Nacional del Ecuador",
+        "address": "Av. Patria, Quito, Ecuador",
+        "description": "Ecuador's national museum featuring art, history, and archaeological exhibits.",
+        "image": "images/museo-nacional.webp"
+    },
+    {
+        "name": "El Panecillo",
+        "address": "El Panecillo, Quito, Ecuador",
+        "description": "A hill with a giant statue of the Virgin Mary, offering panoramic city views.",
+        "image": "images/el-panecillo.webp"
+    },
+    {
+        "name": "Plaza Foch",
+        "address": "Mariscal Foch, Quito, Ecuador",
+        "description": "A lively plaza known for its restaurants, bars, and nightlife in the heart of Quito.",
+        "image": "images/plaza-foch.webp"
+    }
+]

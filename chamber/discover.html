@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Jhalex Commerce</title>
+    <meta name="description"
+        content="Discover the best of Quito, Ecuador. Explore local attractions, culture, and opportunities with Jhalex Commerce Chamber of Commerce.">
+    <meta name="author" content="Jhon A. Tobar">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/image9.jpg" alt="Jhalex Commerce Logo" class="logo">
+            <div class="site-name">Jhalex Commerce</div>
+        </div>
+    </header>
+    <nav>
+        <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Discover Quito, Ecuador</h1>
+        <div id="visitor-message" class="visitor-message"></div>
+        <section class="discover-grid" id="discover-grid">
+            <!-- Cards will be injected here by JS -->
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>📍 Ayapamba Street, Quito, Ecuador</p>
+                <p>📞 (593) 992957913</p>
+                <p>✉️ info@jhalexcommerce.org</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Jhalex Commerce</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+    <script src="scripts/discover.js"></script>
+</body>
+
+</html>
