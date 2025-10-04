@@ -1,3 +1,23 @@
+/* Style for Learn more button */
+.learn-more {
+    margin-top: 1rem;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+.learn-more:hover,
+.learn-more:focus {
+    background: #125ea2;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.18);
+}
+
 /* Base grid layout for discover page */
 .discover-grid {
     display: grid;
