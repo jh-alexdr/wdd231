@@ -1,49 +1,49 @@
 [
     {
         "name": "Mitad del Mundo",
-        "address": "Mitad del Mundo, Quito",
+        "address": "Av. Manuel Córdova Galarza, Quito, Ecuador",
         "description": "A monument and museum marking the equator line, offering cultural exhibits and panoramic views.",
         "image": "images/Mitad del Mundo.webp"
     },
     {
         "name": "Basilica del Voto Nacional",
-        "address": "Basílica, Quito",
+        "address": "Carchi 122 y Venezuela, Quito, Ecuador",
         "description": "A stunning neo-Gothic church with towers you can climb for breathtaking city views.",
         "image": "images/Basílica-del-Voto-Nacional.webp"
     },
     {
         "name": "TelefériQo Quito",
-        "address": "TelefériQo, Quito",
+        "address": "Fulgencio Araujo, Quito, Ecuador",
         "description": "A cable car ride up the Pichincha Volcano, providing spectacular vistas and hiking trails.",
         "image": "images/Teleferico-Quito.webp"
     },
     {
         "name": "La Ronda",
-        "address": "La Ronda, Quito",
+        "address": "La Ronda, Centro Histórico, Quito, Ecuador",
         "description": "A historic street filled with artisan shops, cafes, and vibrant nightlife.",
         "image": "images/La Ronda.webp"
     },
     {
         "name": "Parque La Carolina",
-        "address": "Parque La Carolina, Quito",
+        "address": "Av. de los Shyris, Quito, Ecuador",
         "description": "A large urban park with gardens, sports facilities, and a botanical garden.",
         "image": "images/Parque-La-Carolina.webp"
     },
     {
         "name": "Museo Nacional del Ecuador",
-        "address": "Museo Nacional, Quito",
+        "address": "Av. Patria, Quito, Ecuador",
         "description": "Ecuador's national museum featuring art, history, and archaeological exhibits.",
         "image": "images/Museo-Nacional-del-Ecuador.webp"
     },
     {
         "name": "El Panecillo",
-        "address": "El Panecillo, Quito",
+        "address": "El Panecillo, Quito, Ecuador",
         "description": "A hill with a giant statue of the Virgin Mary, offering panoramic city views.",
         "image": "images/El-Panecillo.webp"
     },
     {
         "name": "Plaza Foch",
-        "address": "Plaza Foch, Quito",
+        "address": "Mariscal Foch, Quito, Ecuador",
         "description": "A lively plaza known for its restaurants, bars, and nightlife in the heart of Quito.",
         "image": "images/Plaza-Foch.webp"
     }
