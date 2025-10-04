@@ -337,7 +337,7 @@ main>h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(34, 51, 74, 0.8) 0%, rgba(62, 146, 204, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(34, 51, 74, 0.4) 0%, rgba(62, 146, 204, 0.4) 100%);
     color: white;
     display: flex;
     flex-direction: column;
